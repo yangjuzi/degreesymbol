@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter – °C ↔ °F - Degreesymbol.app</title>
+    <meta name="description" content="Instant temperature converter for Celsius to Fahrenheit and Fahrenheit to Celsius. Perfect for weather, cooking, and scientific applications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-900">degreesymbol.app</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                    <a href="tools.html" class="text-blue-600 font-medium hover:text-blue-800 transition">Tools</a>
+                    <a href="guides.html" class="text-gray-600 hover:text-gray-900 transition">Guides</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-600">Home</a>
+                <a href="tools.html" class="block py-2 text-blue-600 font-medium">Tools</a>
+                <a href="guides.html" class="block py-2 text-gray-600 hover:text-gray-900">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Temperature Converter</h1>
+            <p class="text-xl text-gray-600 mb-8">Convert Celsius to Fahrenheit and Fahrenheit to Celsius instantly</p>
+            <div class="text-sm text-gray-500">Perfect for weather, cooking, and scientific applications</div>
+        </div>
+    </section>
+
+    <!-- Converter Tool -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+                <!-- Input Section -->
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label for="celsius-input" class="block text-sm font-medium text-gray-700 mb-2">Celsius (°C)</label>
+                        <input type="number" id="celsius-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-lg" placeholder="Enter Celsius" step="0.1">
+                        <div class="mt-2 text-sm text-gray-500">Example: 0, 25, 100</div>
+                    </div>
+                    <div>
+                        <label for="fahrenheit-input" class="block text-sm font-medium text-gray-700 mb-2">Fahrenheit (°F)</label>
+                        <input type="number" id="fahrenheit-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-lg" placeholder="Enter Fahrenheit" step="0.1">
+                        <div class="mt-2 text-sm text-gray-500">Example: 32, 77, 212</div>
+                    </div>
+                </div>
+
+                <!-- Conversion Buttons -->
+                <div class="flex justify-center space-x-4 mb-8">
+                    <button id="convert-to-fahrenheit" class="bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                        Celsius → Fahrenheit
+                    </button>
+                    <button id="convert-to-celsius" class="bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                        Fahrenheit → Celsius
+                    </button>
+                </div>
+
+                <!-- Result Display -->
+                <div id="result" class="bg-orange-50 rounded-xl p-6 hidden">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Conversion Result</h3>
+                    <div id="result-text" class="text-2xl font-bold text-orange-600"></div>
+                </div>
+
+                <!-- Common Temperatures Reference -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Common Temperature References</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Water Freezes</span>
+                                <span class="text-gray-600">0°C = 32°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Room Temperature</span>
+                                <span class="text-gray-600">20°C = 68°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Body Temperature</span>
+                                <span class="text-gray-600">37°C = 98.6°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Water Boils</span>
+                                <span class="text-gray-600">100°C = 212°F</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Oven Baking</span>
+                                <span class="text-gray-600">180°C = 356°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Hot Summer Day</span>
+                                <span class="text-gray-600">30°C = 86°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Cold Winter Day</span>
+                                <span class="text-gray-600">-10°C = 14°F</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Extreme Heat</span>
+                                <span class="text-gray-600">40°C = 104°F</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formula Information -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Conversion Formulas</h3>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Celsius to Fahrenheit:</h4>
+                                <p class="text-gray-600 font-mono">°F = (°C × 9/5) + 32</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Fahrenheit to Celsius:</h4>
+                                <p class="text-gray-600 font-mono">°C = (°F - 32) × 5/9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Temperature Tips -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Temperature Tips</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium text-blue-900 mb-2">Celsius Quick Reference</h4>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>• -18°C: 0°F (freezer temperature)</li>
+                                <li>• 0°C: 32°F (water freezes)</li>
+                                <li>• 10°C: 50°F (cool day)</li>
+                                <li>• 20°C: 68°F (room temperature)</li>
+                                <li>• 30°C: 86°F (warm day)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-4">
+                            <h4 class="font-medium text-red-900 mb-2">Fahrenheit Quick Reference</h4>
+                            <ul class="text-sm text-red-700 space-y-1">
+                                <li>• 0°F: -18°C (very cold)</li>
+                                <li>• 32°F: 0°C (freezing point)</li>
+                                <li>• 50°F: 10°C (cool)</li>
+                                <li>• 70°F: 21°C (comfortable)</li>
+                                <li>• 90°F: 32°C (hot)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Common Applications</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Weather</h3>
+                    <p class="text-gray-600 text-center">Convert weather forecasts and temperatures between Celsius and Fahrenheit for travel planning.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Cooking</h3>
+                    <p class="text-gray-600 text-center">Convert oven temperatures and cooking instructions between Celsius and Fahrenheit recipes.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Science</h3>
+                    <p class="text-gray-600 text-center">Scientific calculations and laboratory work often require temperature unit conversions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="tools.html" class="text-gray-300 hover:text-white transition">Tools</a></li>
+                        <li><a href="guides.html" class="text-gray-300 hover:text-white transition">Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="degrees-to-radians.html" class="text-gray-300 hover:text-white transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="text-gray-300 hover:text-white transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="text-gray-300 hover:text-white transition">HTML & Unicode</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Guides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="text-gray-300 hover:text-white transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="text-gray-300 hover:text-white transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="text-gray-300 hover:text-white transition">Word Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; Copyright 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const celsiusInput = document.getElementById('celsius-input');
+        const fahrenheitInput = document.getElementById('fahrenheit-input');
+        const convertToFahrenheitBtn = document.getElementById('convert-to-fahrenheit');
+        const convertToCelsiusBtn = document.getElementById('convert-to-celsius');
+        const resultDiv = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+
+        function showResult(text) {
+            resultText.textContent = text;
+            resultDiv.classList.remove('hidden');
+        }
+
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+
+        convertToFahrenheitBtn.addEventListener('click', function() {
+            const celsius = parseFloat(celsiusInput.value);
+            if (!isNaN(celsius)) {
+                const fahrenheit = celsiusToFahrenheit(celsius);
+                fahrenheitInput.value = fahrenheit.toFixed(1);
+                showResult(`${celsius}°C = ${fahrenheit.toFixed(1)}°F`);
+            }
+        });
+
+        convertToCelsiusBtn.addEventListener('click', function() {
+            const fahrenheit = parseFloat(fahrenheitInput.value);
+            if (!isNaN(fahrenheit)) {
+                const celsius = fahrenheitToCelsius(fahrenheit);
+                celsiusInput.value = celsius.toFixed(1);
+                showResult(`${fahrenheit}°F = ${celsius.toFixed(1)}°C`);
+            }
+        });
+
+        // Real-time conversion on input
+        celsiusInput.addEventListener('input', function() {
+            const celsius = parseFloat(this.value);
+            if (!isNaN(celsius)) {
+                const fahrenheit = celsiusToFahrenheit(celsius);
+                fahrenheitInput.value = fahrenheit.toFixed(1);
+            }
+        });
+
+        fahrenheitInput.addEventListener('input', function() {
+            const fahrenheit = parseFloat(this.value);
+            if (!isNaN(fahrenheit)) {
+                const celsius = fahrenheitToCelsius(fahrenheit);
+                celsiusInput.value = celsius.toFixed(1);
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angle Converter – Degrees ↔ Radians - Degreesymbol.app</title>
+    <meta name="description" content="Instant angle converter tool for degrees to radians and radians to degrees conversion. Perfect for mathematics, physics, and engineering calculations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-900">degreesymbol.app</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                    <a href="tools.html" class="text-blue-600 font-medium hover:text-blue-800 transition">Tools</a>
+                    <a href="guides.html" class="text-gray-600 hover:text-gray-900 transition">Guides</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-600">Home</a>
+                <a href="tools.html" class="block py-2 text-blue-600 font-medium">Tools</a>
+                <a href="guides.html" class="block py-2 text-gray-600 hover:text-gray-900">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Angle Converter</h1>
+            <p class="text-xl text-gray-600 mb-8">Convert degrees to radians and radians to degrees instantly</p>
+            <div class="text-sm text-gray-500">Perfect for mathematics, physics, and engineering calculations</div>
+        </div>
+    </section>
+
+    <!-- Converter Tool -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+                <!-- Input Section -->
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label for="degrees-input" class="block text-sm font-medium text-gray-700 mb-2">Degrees (°)</label>
+                        <input type="number" id="degrees-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg" placeholder="Enter degrees" step="0.01">
+                        <div class="mt-2 text-sm text-gray-500">Example: 90, 180, 360</div>
+                    </div>
+                    <div>
+                        <label for="radians-input" class="block text-sm font-medium text-gray-700 mb-2">Radians (rad)</label>
+                        <input type="number" id="radians-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg" placeholder="Enter radians" step="0.01">
+                        <div class="mt-2 text-sm text-gray-500">Example: 1.57, 3.14, 6.28</div>
+                    </div>
+                </div>
+
+                <!-- Conversion Buttons -->
+                <div class="flex justify-center space-x-4 mb-8">
+                    <button id="convert-to-radians" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                        Degrees → Radians
+                    </button>
+                    <button id="convert-to-degrees" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                        Radians → Degrees
+                    </button>
+                </div>
+
+                <!-- Result Display -->
+                <div id="result" class="bg-blue-50 rounded-xl p-6 hidden">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Conversion Result</h3>
+                    <div id="result-text" class="text-2xl font-bold text-blue-600"></div>
+                </div>
+
+                <!-- Common Angles Reference -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Common Angle Conversions</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">0°</span>
+                                <span class="text-gray-600">= 0 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">30°</span>
+                                <span class="text-gray-600">= π/6 rad ≈ 0.524 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">45°</span>
+                                <span class="text-gray-600">= π/4 rad ≈ 0.785 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">60°</span>
+                                <span class="text-gray-600">= π/3 rad ≈ 1.047 rad</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">90°</span>
+                                <span class="text-gray-600">= π/2 rad ≈ 1.571 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">180°</span>
+                                <span class="text-gray-600">= π rad ≈ 3.142 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">270°</span>
+                                <span class="text-gray-600">= 3π/2 rad ≈ 4.712 rad</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                <span class="font-medium">360°</span>
+                                <span class="text-gray-600">= 2π rad ≈ 6.283 rad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formula Information -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Conversion Formulas</h3>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Degrees to Radians:</h4>
+                                <p class="text-gray-600 font-mono">radians = degrees × (π / 180)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Radians to Degrees:</h4>
+                                <p class="text-gray-600 font-mono">degrees = radians × (180 / π)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Applications</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Mathematics</h3>
+                    <p class="text-gray-600 text-center">Trigonometry, calculus, and geometric calculations often require angle conversions between degrees and radians.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Physics</h3>
+                    <p class="text-gray-600 text-center">Angular velocity, rotational motion, and wave mechanics calculations use both degree and radian measurements.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Engineering</h3>
+                    <p class="text-gray-600 text-center">Mechanical engineering, robotics, and CAD design applications frequently use angle conversions for precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="tools.html" class="text-gray-300 hover:text-white transition">Tools</a></li>
+                        <li><a href="guides.html" class="text-gray-300 hover:text-white transition">Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="degrees-to-radians.html" class="text-gray-300 hover:text-white transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="text-gray-300 hover:text-white transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="text-gray-300 hover:text-white transition">HTML & Unicode</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Guides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="text-gray-300 hover:text-white transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="text-gray-300 hover:text-white transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="text-gray-300 hover:text-white transition">Word Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; Copyright 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const degreesInput = document.getElementById('degrees-input');
+        const radiansInput = document.getElementById('radians-input');
+        const convertToRadiansBtn = document.getElementById('convert-to-radians');
+        const convertToDegreesBtn = document.getElementById('convert-to-degrees');
+        const resultDiv = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+
+        function showResult(text) {
+            resultText.textContent = text;
+            resultDiv.classList.remove('hidden');
+        }
+
+        function degreesToRadians(degrees) {
+            return degrees * (Math.PI / 180);
+        }
+
+        function radiansToDegrees(radians) {
+            return radians * (180 / Math.PI);
+        }
+
+        convertToRadiansBtn.addEventListener('click', function() {
+            const degrees = parseFloat(degreesInput.value);
+            if (!isNaN(degrees)) {
+                const radians = degreesToRadians(degrees);
+                radiansInput.value = radians.toFixed(6);
+                showResult(`${degrees}° = ${radians.toFixed(6)} rad`);
+            }
+        });
+
+        convertToDegreesBtn.addEventListener('click', function() {
+            const radians = parseFloat(radiansInput.value);
+            if (!isNaN(radians)) {
+                const degrees = radiansToDegrees(radians);
+                degreesInput.value = degrees.toFixed(6);
+                showResult(`${radians} rad = ${degrees.toFixed(6)}°`);
+            }
+        });
+
+        // Real-time conversion on input
+        degreesInput.addEventListener('input', function() {
+            const degrees = parseFloat(this.value);
+            if (!isNaN(degrees)) {
+                const radians = degreesToRadians(degrees);
+                radiansInput.value = radians.toFixed(6);
+            }
+        });
+
+        radiansInput.addEventListener('input', function() {
+            const radians = parseFloat(this.value);
+            if (!isNaN(radians)) {
+                const degrees = radiansToDegrees(radians);
+                degreesInput.value = degrees.toFixed(6);
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

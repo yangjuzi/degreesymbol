@@ -1,0 +1,138 @@
+我要做1个网站degreesymbol.app，需求如下：
+1.技术栈:用纯粹的HTML+TailwindCSS来做，TailwindCSS加载：考虑使用Tailwind CSS的CDN精简版本或自构建精简版本以减少文件大小
+2.核心功能:我的域名是degreesymbol.app我要做一个degree symbol相关的网站
+3.功能区域:导航栏展示Home Tools Guides
+h2标签展示相关的degree符号，h2标签展示what is degree symbol及回答，
+h2标签展示how to type a symbol及回答，h2标签展示common uses，h2标签展示FAQ及具体问答。footer区域需要展示about us、contact us、terms of service、Privacy Policy其内容需要编写得专业、真实。
+4.网站文案:所有网站上的文案内容，我要求你使用英文。
+5.支持移动端适配，响应式布局
+6.网站风格和具体设计如下：
+
+1. 整体基调
+
+风格定位：极简工具站
+
+颜色搭配：
+
+背景：白色 (#FFFFFF)
+
+字体：深灰/黑色 (#333333)
+
+强调色（按钮/链接）：蓝色 (#1E90FF / #2563EB）
+
+字体：系统默认字体堆栈（Arial / Helvetica / sans-serif），保证加载快
+
+按钮风格：圆角、轻微阴影、Hover 时变深蓝
+
+2. 页面布局
+🏠 Home
+内容
+
+大号 Degree Symbol (°) + 一键 Copy 按钮
+
+简短介绍：what is the degree symbol & common uses
+
+快捷入口（链接到 Guides 和 Tools 里最热门的页面）
+
+目的
+
+满足“degree symbol copy / copy and paste”等核心搜索
+
+作为整站的流量入口
+
+Hero 区域：大标题「Degree Symbol (°) Copy & Paste」+ 一键复制按钮
+
+Quick Copy 区域：
+
+[°] [°C] [°F] 快速复制按钮
+
+简短介绍：What is degree symbol, common uses (temperature, angles).
+
+内部导航卡片（链接到 Tools / Guides）：
+
+Tools → Converters + Images
+
+Guides → How to Type, Insert in Word/Excel
+FAQ
+对应url是index.html
+
+
+🛠 Tools
+
+采用 卡片式布局，每个功能一个简洁卡片：
+
+Converters
+
+Degrees ↔ Radians Converter
+
+Celsius ↔ Fahrenheit Converter
+
+Code & Symbols
+
+Degree Symbol HTML & Unicode
+
+Images & Icons
+
+Degree Symbol PNG / SVG Download
+
+Degree Symbol Icon Pack
+
+👉 每个卡片有：
+
+简短说明（20–30 字）
+
+CTA 按钮（"Open Tool" / "Download"）
+对应的页面分别是
+URL	Title	说明
+/degrees-to-radians	Angle Converter – Degrees ↔ Radians	即时换算
+/celsius-to-fahrenheit	Temperature Converter – °C ↔ °F	温度换算
+/degree-symbol-html	Degree Symbol HTML & Unicode	代码复制
+/degree-symbol-images	Degree Symbol PNG / SVG Download	高分辨率透明背景图下载，性能优化：可以添加懒加载图片、预加载关键资源等策略
+/degree-symbol-icons	Degree Symbol Icon Pack	不同风格矢量图标，性能优化：可以添加懒加载图片、预加载关键资源等策略
+
+📚 Guides
+Mac / iPhone / Windows
+
+Word / Excel / Revit
+
+LaTeX / Python
+
+Celsius / Fahrenheit / Slash Variant
+
+文章列表（博客型布局），支持 SEO：
+
+对应的页面分别是
+/how-to-type-degree-symbol-mac	
+/how-to-type-degree-symbol-iphone	
+/how-to-type-degree-symbol-keyboard	
+/insert-degree-symbol-word	
+/insert-degree-symbol-excel	
+/insert-degree-symbol-revit	
+/degree-symbol-latex	
+/degree-symbol-python	
+/celsius-degree-symbol	
+/fahrenheit-degree-symbol	
+/degree-symbol-with-slash
+
+
+
+3. 细节优化
+
+复制按钮交互：点击后提示 "Copied ✓"（绿色微动画）
+
+SEO 元素：
+
+每个工具页 H1 包含完整关键词
+
+Guides 用 FAQ Schema（JSON-LD）提升搜索展示
+4.footer
+footer中展示导航的所有页面链接，还有About Us| Privacy Policy | Contact Us | Terms of Service 4个页面链接
+还有© Copyright 2025. All Rights Reserved.
+
+
+
+👉 总结：
+网站保持 白底 + 黑灰字体 + 蓝色按钮 极简风格。
+导航简化为 Home | Tools | Guides，每个页面都有导航和footer
+
+

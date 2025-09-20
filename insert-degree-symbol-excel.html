@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Insert Degree Symbol in Excel - Degreesymbol.app</title>
+    <meta name="description" content="Learn multiple methods to insert degree symbols in Excel spreadsheets. Complete guide with keyboard shortcuts, formulas, and step-by-step instructions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-900">degreesymbol.app</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                    <a href="tools.html" class="text-gray-600 hover:text-gray-900 transition">Tools</a>
+                    <a href="guides.html" class="text-gray-600 hover:text-gray-900 transition">Guides</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-600">Home</a>
+                <a href="tools.html" class="block py-2 text-gray-600 hover:text-gray-900">Tools</a>
+                <a href="guides.html" class="block py-2 text-gray-600 hover:text-gray-900">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How to Insert Degree Symbol in Excel</h1>
+            <p class="text-xl text-gray-600 mb-8">Master multiple methods to add degree symbols to your Excel spreadsheets with ease</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Quick Methods -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Quick Methods</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Keyboard Shortcut</h3>
+                        <p class="text-gray-600 mb-3">Hold Alt and type 0176 on the numeric keypad</p>
+                        <div class="bg-white rounded-lg p-3 font-mono text-center text-lg">
+                            Alt + 0176
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">CHAR Function</h3>
+                        <p class="text-gray-600 mb-3">Use Excel's CHAR function to create the symbol</p>
+                        <div class="bg-white rounded-lg p-3 font-mono text-center text-lg">
+                            =CHAR(176)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Methods -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Detailed Methods</h2>
+                <div class="space-y-8">
+                    <!-- Keyboard Shortcut Method -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 1: Keyboard Shortcut</h3>
+                        <p class="text-gray-600 mb-4">The fastest way to insert a degree symbol in Excel is using the Alt key code:</p>
+                        <ol class="list-decimal pl-6 text-gray-600 space-y-2 mb-4">
+                            <li>Make sure your Num Lock is on</li>
+                            <li>Click on the cell where you want the degree symbol</li>
+                            <li>Press and hold the Alt key</li>
+                            <li>Type 0176 on the numeric keypad (not the top row numbers)</li>
+                            <li>Release the Alt key</li>
+                            <li>The degree symbol (°) will appear</li>
+                        </ol>
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-700"><strong>Note:</strong> This method requires a numeric keypad. If you're using a laptop without a numeric keypad, use one of the other methods below.</p>
+                        </div>
+                    </div>
+
+                    <!-- CHAR Function Method -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 2: CHAR Function</h3>
+                        <p class="text-gray-600 mb-4">Excel's CHAR function can generate the degree symbol programmatically:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-lg text-center mb-2">=CHAR(176)</p>
+                            <p class="text-sm text-gray-600 text-center">Returns: °</p>
+                        </div>
+                        <p class="text-gray-600 mb-4">You can combine this with other text or numbers:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-center mb-2">="25"&CHAR(176)&"C"</p>
+                            <p class="text-sm text-gray-600 text-center">Returns: 25°C</p>
+                        </div>
+                        <p class="text-gray-600 mb-4">Or use it with cell references:</p>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="font-mono text-center mb-2">=A1&CHAR(176)&"F"</p>
+                            <p class="text-sm text-gray-600 text-center">If A1 contains 98, returns: 98°F</p>
+                        </div>
+                    </div>
+
+                    <!-- Symbol Dialog Method -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 3: Symbol Dialog</h3>
+                        <p class="text-gray-600 mb-4">Use Excel's built-in Symbol dialog box:</p>
+                        <ol class="list-decimal pl-6 text-gray-600 space-y-2 mb-4">
+                            <li>Click on the cell where you want the symbol</li>
+                            <li>Go to the <strong>Insert</strong> tab in the ribbon</li>
+                            <li>Click on <strong>Symbol</strong> in the Symbols group</li>
+                            <li>In the Symbol dialog, select <strong>Latin-1 Supplement</strong> from the Subset dropdown</li>
+                            <li>Scroll down and find the degree symbol (°)</li>
+                            <li>Click <strong>Insert</strong> and then <strong>Close</strong></li>
+                        </ol>
+                    </div>
+
+                    <!-- Copy and Paste Method -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 4: Copy and Paste</h3>
+                        <p class="text-gray-600 mb-4">The simplest method is to copy the symbol from here:</p>
+                        <div class="flex justify-center mb-4">
+                            <button onclick="copySymbol('°')" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 text-2xl">
+                                ° Copy
+                            </button>
+                        </div>
+                        <p class="text-gray-600">Just click the button above to copy the degree symbol, then paste it into your Excel cell.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Examples -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Practical Examples</h2>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Temperature Display</h3>
+                    <p class="text-gray-600 mb-4">Here are some common temperature display formulas:</p>
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-lg p-3">
+                            <p class="font-mono text-sm">=A1&CHAR(176)&"C"</p>
+                            <p class="text-xs text-gray-600">Displays Celsius temperature with degree symbol</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <p class="font-mono text-sm">=B1&CHAR(176)&"F"</p>
+                            <p class="text-xs text-gray-600">Displays Fahrenheit temperature with degree symbol</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <p class="font-mono text-sm">=TEXT(C1,"0")&CHAR(176)</p>
+                            <p class="text-xs text-gray-600">Displays angle measurement with degree symbol</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips and Tricks -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Tips and Tricks</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">AutoCorrect Shortcut</h3>
+                        <p class="text-gray-600 mb-3">Set up AutoCorrect to automatically replace text with degree symbols:</p>
+                        <ol class="list-decimal pl-6 text-gray-600 space-y-1 text-sm">
+                            <li>Go to File > Options > Proofing</li>
+                            <li>Click AutoCorrect Options</li>
+                            <li>Replace: <code>deg</code></li>
+                            <li>With: <code>°</code></li>
+                            <li>Click Add, then OK</li>
+                        </ol>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Conditional Formatting</h3>
+                        <p class="text-gray-600 mb-3">Add degree symbols conditionally:</p>
+                        <p class="text-gray-600 text-sm">Use custom number formats like <code>0"°"</code> to display numbers with degree symbols automatically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Troubleshooting</h2>
+                <div class="bg-yellow-50 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Common Issues</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">Alt + 0176 Not Working?</h4>
+                            <p class="text-gray-600 text-sm">Make sure you're using the numeric keypad, not the top row numbers. Enable Num Lock and try again.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">CHAR Function Shows #VALUE! Error?</h4>
+                            <p class="text-gray-600 text-sm">Your Excel version might use a different character encoding. Try <code>=UNICHAR(176)</code> for newer Excel versions.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">Symbol Not Displaying Correctly?</h4>
+                            <p class="text-gray-600 text-sm">Check that your font supports the degree symbol. Most standard fonts like Arial, Calibri, and Times New Roman work fine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Best Practices</h2>
+                <div class="bg-purple-50 rounded-xl p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Use CHAR(176) for formulas that need to be portable across different computers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Set up AutoCorrect for frequently used degree symbol combinations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Use custom number formats for displaying large ranges of numbers with degree symbols</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Test your spreadsheets on different computers to ensure compatibility</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="tools.html" class="text-gray-300 hover:text-white transition">Tools</a></li>
+                        <li><a href="guides.html" class="text-gray-300 hover:text-white transition">Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="degrees-to-radians.html" class="text-gray-300 hover:text-white transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="text-gray-300 hover:text-white transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="text-gray-300 hover:text-white transition">HTML & Unicode</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Guides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="text-gray-300 hover:text-white transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="text-gray-300 hover:text-white transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="text-gray-300 hover:text-white transition">Word Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; Copyright 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy symbol function
+        function copySymbol(symbol) {
+            navigator.clipboard.writeText(symbol).then(function() {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('bg-green-600');
+                button.classList.remove('bg-blue-600');
+
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-green-600');
+                    button.classList.add('bg-blue-600');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

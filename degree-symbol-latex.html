@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Symbol in LaTeX - Degreesymbol.app</title>
+    <meta name="description" content="Learn how to type degree symbols in LaTeX documents. Complete guide with packages, commands, and examples for scientific and mathematical documents.">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-900">degreesymbol.app</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                    <a href="tools.html" class="text-gray-600 hover:text-gray-900 transition">Tools</a>
+                    <a href="guides.html" class="text-gray-600 hover:text-gray-900 transition">Guides</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-600">Home</a>
+                <a href="tools.html" class="block py-2 text-gray-600 hover:text-gray-900">Tools</a>
+                <a href="guides.html" class="block py-2 text-gray-600 hover:text-gray-900">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-gradient-to-b from-purple-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Degree Symbol in LaTeX</h1>
+            <p class="text-xl text-gray-600 mb-8">Complete guide to using degree symbols in LaTeX documents for scientific and mathematical writing</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Quick Reference -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Quick Reference</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 rounded-xl p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 mb-2">Basic</h3>
+                        <p class="font-mono text-lg">$^\circ$</p>
+                        <p class="text-sm text-gray-600 mt-1">Produces: °</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 mb-2">With Package</h3>
+                        <p class="font-mono text-lg">\degree</p>
+                        <p class="text-sm text-gray-600 mt-1">Requires: gensymb</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 mb-2">SI Units</h3>
+                        <p class="font-mono text-lg">\degreeCelsius</p>
+                        <p class="text-sm text-gray-600 mt-1">Requires: siunitx</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methods -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Methods</h2>
+                <div class="space-y-8">
+                    <!-- Method 1: Superscript Circle -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 1: Superscript Circle (No Package)</h3>
+                        <p class="text-gray-600 mb-4">The simplest method doesn't require any additional packages:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-lg mb-2">$25^\circ$C</p>
+                            <p class="text-sm text-gray-600">Produces: 25°C</p>
+                        </div>
+                        <p class="text-gray-600 mb-4">You can also use it in math mode for angles:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-lg mb-2">$\theta = 90^\circ$</p>
+                            <p class="text-sm text-gray-600">Produces: θ = 90°</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-700"><strong>Note:</strong> This method works in any LaTeX document without additional packages, but it creates a superscript symbol that may not align perfectly with text.</p>
+                        </div>
+                    </div>
+
+                    <!-- Method 2: gensymb Package -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 2: gensymb Package</h3>
+                        <p class="text-gray-600 mb-4">The gensymb package provides a dedicated degree symbol command:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-sm mb-2">\usepackage{gensymb}</p>
+                            <p class="font-mono text-lg mb-2">25\degree C</p>
+                            <p class="text-sm text-gray-600">Produces: 25°C</p>
+                        </div>
+                        <p class="text-gray-600">This method provides a properly aligned degree symbol that works well in both text and math modes.</p>
+                    </div>
+
+                    <!-- Method 3: siunitx Package -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 3: siunitx Package (Recommended)</h3>
+                        <p class="text-gray-600 mb-4">The siunitx package is the most comprehensive solution for scientific units:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-sm mb-2">\usepackage{siunitx}</p>
+                            <p class="font-mono text-lg mb-2">\SI{25}{\degreeCelsius}</p>
+                            <p class="text-sm text-gray-600">Produces: 25°C</p>
+                        </div>
+                        <p class="text-gray-600 mb-4">It also provides commands for other units:</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="bg-white rounded p-2">
+                                <p class="font-mono text-sm">\SI{90}{\degree}</p>
+                                <p class="text-xs text-gray-600">For angles: 90°</p>
+                            </div>
+                            <div class="bg-white rounded p-2">
+                                <p class="font-mono text-sm">\SI{77}{\degreeFahrenheit}</p>
+                                <p class="text-xs text-gray-600">For Fahrenheit: 77°F</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">This package also handles proper spacing, automatic unit formatting, and is the recommended approach for scientific documents.</p>
+                    </div>
+
+                    <!-- Method 4: textcomp Package -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Method 4: textcomp Package</h3>
+                        <p class="text-gray-600 mb-4">The textcomp package provides additional text symbols:</p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p class="font-mono text-sm mb-2">\usepackage{textcomp}</p>
+                            <p class="font-mono text-lg mb-2">25\textdegree C</p>
+                            <p class="text-sm text-gray-600">Produces: 25°C</p>
+                        </div>
+                        <p class="text-gray-600">This works well in text mode and provides good typographic quality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Complete Examples</h2>
+                <div class="space-y-6">
+                    <!-- Basic Document Example -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Basic Document Example</h3>
+                        <div class="bg-white rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                            <pre>\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Temperature Conversion}
+The temperature is $25^\circ$C.
+
+Water boils at $100^\circ$C and freezes at $0^\circ$C.
+
+\end{document}</pre>
+                        </div>
+                    </div>
+
+                    <!-- Scientific Document Example -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Scientific Document Example (siunitx)</h3>
+                        <div class="bg-white rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                            <pre>\documentclass{article}
+\usepackage{siunitx}
+
+\begin{document}
+
+\section{Experimental Results}
+\begin{itemize}
+    \item Initial temperature: \SI{25.3}{\degreeCelsius}
+    \item Final temperature: \SI{98.6}{\degreeCelsius}
+    \item Angle of incidence: \SI{45}{\degree}
+    \item Angular velocity: \SI{90}{\degree\per\second}
+\end{itemize}
+
+\end{document}</pre>
+                        </div>
+                    </div>
+
+                    <!-- Math Mode Example -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Mathematical Example</h3>
+                        <div class="bg-white rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                            <pre>\documentclass{article}
+\usepackage{amsmath}
+\usepackage{gensymb}
+
+\begin{document}
+
+\section{Trigonometry}
+For a right triangle:
+\begin{align}
+    \sin(30^\circ) &= \frac{1}{2} \\
+    \cos(60^\circ) &= \frac{1}{2} \\
+    \tan(45^\circ) &= 1
+\end{align}
+
+\end{document}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Method Comparison</h2>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Method</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Package</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Command</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Superscript</td>
+                                <td class="px-6 py-4 whitespace-nowrap">None</td>
+                                <td class="px-6 py-4 font-mono text-sm">$^\circ$</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Quick usage, no setup</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">gensymb</td>
+                                <td class="px-6 py-4 whitespace-nowrap">gensymb</td>
+                                <td class="px-6 py-4 font-mono text-sm">\degree</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Basic scientific documents</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">siunitx</td>
+                                <td class="px-6 py-4 whitespace-nowrap">siunitx</td>
+                                <td class="px-6 py-4 font-mono text-sm">\SI{25}{\degreeCelsius}</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Professional scientific work</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">textcomp</td>
+                                <td class="px-6 py-4 whitespace-nowrap">textcomp</td>
+                                <td class="px-6 py-4 font-mono text-sm">\textdegree</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">Text mode usage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Issues -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Issues and Solutions</h2>
+                <div class="space-y-4">
+                    <div class="bg-red-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Command Not Found</h3>
+                        <p class="text-gray-600 text-sm mb-2">If you get an "undefined control sequence" error, make sure you've included the required package in your preamble.</p>
+                        <div class="bg-white rounded p-3 font-mono text-xs">
+                            \usepackage{gensymb} % or<br>
+                            \usepackage{siunitx} % or<br>
+                            \usepackage{textcomp}
+                        </div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Spacing Issues</h3>
+                        <p class="text-gray-600 text-sm">The superscript method may create awkward spacing. Use siunitx or gensymb for better typographic quality and automatic spacing.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Font Compatibility</h3>
+                        <p class="text-gray-600 text-sm">Some fonts may not display the degree symbol correctly. Try different font packages or use XeLaTeX/LuaLaTeX with system fonts if needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Best Practices</h2>
+                <div class="bg-green-50 rounded-xl p-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Use siunitx</strong> for scientific documents - it provides comprehensive unit handling and proper formatting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Use gensymb</strong> for basic documents when you don't need full unit formatting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Use superscript method</strong> only for quick, informal documents or when you can't add packages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Be consistent</strong> - choose one method and use it throughout your document</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+                <div class="bg-purple-50 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Related LaTeX Packages</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">amsmath</h4>
+                            <p class="text-sm text-gray-600">Enhanced math formatting, useful for complex mathematical expressions involving degrees.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">amssymb</h4>
+                            <p class="text-sm text-gray-600">Additional mathematical symbols, though not specifically for degrees.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">xcolor</h4>
+                            <p class="text-sm text-gray-600">Color support for highlighting temperature data and visualizations.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">tikz</h4>
+                            <p class="text-sm text-gray-600">For creating diagrams involving angles and degree measurements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="tools.html" class="text-gray-300 hover:text-white transition">Tools</a></li>
+                        <li><a href="guides.html" class="text-gray-300 hover:text-white transition">Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="degrees-to-radians.html" class="text-gray-300 hover:text-white transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="text-gray-300 hover:text-white transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="text-gray-300 hover:text-white transition">HTML & Unicode</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Popular Guides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="text-gray-300 hover:text-white transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="text-gray-300 hover:text-white transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="text-gray-300 hover:text-white transition">Word Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; Copyright 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
