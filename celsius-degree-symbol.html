@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius Degree Symbol (°C) | DegreeSymbol.app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .copy-button {
+            transition: all 0.3s ease;
+        }
+        .copy-button:hover {
+            transform: translateY(-2px);
+        }
+        .copy-success {
+            animation: copySuccess 0.6s ease;
+        }
+        @keyframes copySuccess {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">°</a>
+                    <span class="ml-2 text-xl font-semibold">DegreeSymbol.app</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                    <!-- Tools Dropdown -->
+                    <div class="relative">
+                        <button id="toolsDropdownBtn" class="flex items-center text-gray-600 hover:text-blue-600 transition">
+                            Tools <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="toolsDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="degrees-to-radians.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Angle Converter</a>
+                            <a href="celsius-to-fahrenheit.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Temperature Converter</a>
+                            <a href="degree-symbol-html.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Code & Symbols</a>
+                            <a href="degree-symbol-images.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Download</a>
+                            <a href="degree-symbol-icons.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Icon Pack</a>
+                        </div>
+                    </div>
+
+                    <!-- Guides Dropdown -->
+                    <div class="relative">
+                        <button id="guidesDropdownBtn" class="flex items-center text-blue-600">
+                            Guides <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="guidesDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="how-to-type-degree-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Mac</a>
+                            <a href="how-to-type-degree-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">iPhone</a>
+                            <a href="how-to-type-degree-symbol-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Windows</a>
+                            <a href="insert-degree-symbol-word.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Word</a>
+                            <a href="insert-degree-symbol-excel.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Excel</a>
+                            <a href="insert-degree-symbol-revit.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Revit</a>
+                            <a href="degree-symbol-latex.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">LaTeX</a>
+                            <a href="degree-symbol-python.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Python</a>
+                            <a href="celsius-degree-symbol.html" class="block px-4 py-2 text-blue-600 bg-blue-50 font-medium">Celsius</a>
+                            <a href="fahrenheit-degree-symbol.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Fahrenheit</a>
+                            <a href="degree-symbol-with-slash.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Slash Variant</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                <!-- Mobile Tools Dropdown -->
+                <div>
+                    <button id="mobileToolsBtn" class="flex items-center justify-between w-full py-2 text-gray-600 hover:text-blue-600 transition">
+                        Tools <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileToolsDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="degrees-to-radians.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Angle Converter</a>
+                        <a href="celsius-to-fahrenheit.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Temperature Converter</a>
+                        <a href="degree-symbol-html.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Code & Symbols</a>
+                        <a href="degree-symbol-images.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Download</a>
+                        <a href="degree-symbol-icons.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Icon Pack</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Guides Dropdown -->
+                <div>
+                    <button id="mobileGuidesBtn" class="flex items-center justify-between w-full py-2 text-blue-600">
+                        Guides <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileGuidesDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="how-to-type-degree-symbol-mac.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Mac</a>
+                        <a href="how-to-type-degree-symbol-iphone.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">iPhone</a>
+                        <a href="how-to-type-degree-symbol-keyboard.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Windows</a>
+                        <a href="insert-degree-symbol-word.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Word</a>
+                        <a href="insert-degree-symbol-excel.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Excel</a>
+                        <a href="insert-degree-symbol-revit.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Revit</a>
+                        <a href="degree-symbol-latex.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">LaTeX</a>
+                        <a href="degree-symbol-python.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Python</a>
+                        <a href="celsius-degree-symbol.html" class="block py-1 text-blue-600 font-medium">Celsius</a>
+                        <a href="fahrenheit-degree-symbol.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Fahrenheit</a>
+                        <a href="degree-symbol-with-slash.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Slash Variant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <a href="guides.html" class="text-blue-600 hover:text-blue-700 transition">&larr; Back to Guides</a>
+        </div>
+
+        <h1 class="text-4xl font-bold mb-6">Celsius Degree Symbol (°C)</h1>
+
+        <p class="text-lg text-gray-700 mb-8">
+            Learn everything about the Celsius degree symbol (°C), its proper usage, formatting guidelines, and how to type it across different platforms and applications.
+        </p>
+
+        <!-- Quick Copy Section -->
+        <section class="bg-blue-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Quick Copy</h2>
+            <div class="flex flex-wrap items-center gap-4">
+                <span class="text-3xl font-bold">°C</span>
+                <button onclick="copyText('°C')" class="copy-button bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-copy mr-2"></i>Copy °C
+                </button>
+                <span class="text-3xl font-bold">°C</span>
+                <button onclick="copyText('°C')" class="copy-button bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-copy mr-2"></i>Copy °C
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">About the Celsius Degree Symbol</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">What is °C?</h3>
+                    <p class="text-gray-700 mb-4">
+                        The Celsius degree symbol (°C) represents degrees Celsius, a unit of temperature measurement named after Swedish astronomer Anders Celsius. It's the most widely used temperature scale worldwide.
+                    </p>
+                    <div class="bg-blue-50 rounded p-4">
+                        <p class="text-sm"><strong>Unicode:</strong> U+00B0 + U+0043</p>
+                        <p class="text-sm"><strong>HTML:</strong> &deg;C or &#176;C</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Common Uses</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Weather forecasts and reports</li>
+                        <li>• Scientific temperature measurements</li>
+                        <li>• Cooking and baking recipes</li>
+                        <li>• Medical body temperature readings</li>
+                        <li>• Climate and environmental data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Type Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">How to Type °C</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Windows -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fab fa-windows text-blue-600 mr-2"></i>Windows
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li><kbd class="bg-gray-200 px-2 py-1 rounded text-xs">Alt + 0176</kbd> then <kbd class="bg-gray-200 px-2 py-1 rounded text-xs">C</kbd></li>
+                        <li>Copy and paste: °C</li>
+                        <li>Character Map app</li>
+                    </ul>
+                </div>
+
+                <!-- Mac -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fab fa-apple text-gray-600 mr-2"></i>Mac
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li><kbd class="bg-gray-200 px-2 py-1 rounded text-xs">Option + Shift + 8</kbd> then <kbd class="bg-gray-200 px-2 py-1 rounded text-xs">C</kbd></li>
+                        <li>Character Viewer</li>
+                        <li>Copy and paste: °C</li>
+                    </ul>
+                </div>
+
+                <!-- iPhone/iPad -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fas fa-mobile-alt text-gray-600 mr-2"></i>iPhone/iPad
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li>Hold <kbd class="bg-gray-200 px-2 py-1 rounded text-xs">0</kbd> key</li>
+                        <li>Select ° symbol</li>
+                        <li>Type C after</li>
+                    </ul>
+                </div>
+
+                <!-- Android -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fab fa-android text-green-600 mr-2"></i>Android
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li>Hold <kbd class="bg-gray-200 px-2 py-1 rounded text-xs">0</kbd> key</li>
+                        <li>Select ° symbol</li>
+                        <li>Type C after</li>
+                    </ul>
+                </div>
+
+                <!-- Linux -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fab fa-linux text-orange-600 mr-2"></i>Linux
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li><kbd class="bg-gray-200 px-2 py-1 rounded text-xs">Ctrl + Shift + U</kbd> then <kbd class="bg-gray-200 px-2 py-1 rounded text-xs">00B0</kbd></li>
+                        <li>Character map</li>
+                        <li>Copy and paste: °C</li>
+                    </ul>
+                </div>
+
+                <!-- HTML -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 flex items-center">
+                        <i class="fab fa-html5 text-orange-500 mr-2"></i>HTML
+                    </h3>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li><code>&amp;deg;C</code></li>
+                        <li><code>&amp;#176;C</code></li>
+                        <li><code>&amp;#x00B0;C</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formatting Guidelines Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Formatting Guidelines</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">
+                        <i class="fas fa-check-circle mr-2"></i>Correct Usage
+                    </h3>
+                    <ul class="space-y-2 text-green-700">
+                        <li>✓ 25°C (no space between ° and C)</li>
+                        <li>✓ -5°C (negative temperatures)</li>
+                        <li>✓ 37.5°C (decimal temperatures)</li>
+                        <li>✓ The temperature is 25°C (in sentences)</li>
+                        <li>✓ Water boils at 100°C (scientific contexts)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-red-800">
+                        <i class="fas fa-times-circle mr-2"></i>Common Mistakes
+                    </h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li>✗ 25° C (space between ° and C)</li>
+                        <li>✗ 25c (lowercase c)</li>
+                        <li>✗ 25 C (degree symbol missing)</li>
+                        <li>✗ 25°C (using different degree symbol)</li>
+                        <li>✗ 25*C (using asterisk)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Temperature References Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Common Temperature References</h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+                            <th class="border border-gray-300 px-4 py-2 text-center">Temperature (°C)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Absolute Zero</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">-273.15°C</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Water Freezes</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">0°C</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Normal Human Body</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">37°C</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Water Boils</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">100°C</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Oven Temperature</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">180-220°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Usage Examples Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Usage Examples</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Weather -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Weather Reports</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-blue-50 rounded">
+                            <p class="font-medium">Today's Weather</p>
+                            <p>High: 25°C, Low: 18°C</p>
+                            <p>Feels like 23°C</p>
+                        </div>
+                        <div class="p-3 bg-yellow-50 rounded">
+                            <p class="font-medium">Temperature Trend</p>
+                            <p>Currently: 22°C</p>
+                            <p>Humidity: 65%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cooking -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Cooking & Baking</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-orange-50 rounded">
+                            <p class="font-medium">Oven Temperatures</p>
+                            <p>Bake: 180°C for 25 minutes</p>
+                            <p>Broil: 220°C for 5 minutes</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded">
+                            <p class="font-medium">Food Safety</p>
+                            <p>Chicken: 74°C internal temperature</p>
+                            <p>Beef: 63°C for medium-rare</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scientific -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Scientific Contexts</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-purple-50 rounded">
+                            <p class="font-medium">Laboratory</p>
+                            <p>Store at 4°C</p>
+                            <p>Incubate at 37°C</p>
+                        </div>
+                        <div class="p-3 bg-indigo-50 rounded">
+                            <p class="font-medium">Physics</p>
+                            <p>Melting point: 0°C</p>
+                            <p>Boiling point: 100°C</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Medical Contexts</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-red-50 rounded">
+                            <p class="font-medium">Body Temperature</p>
+                            <p>Normal: 36.5-37.5°C</p>
+                            <p>Fever: >38°C</p>
+                        </div>
+                        <div class="p-3 bg-pink-50 rounded">
+                            <p class="font-medium">Medical Storage</p>
+                            <p>Vaccines: 2-8°C</p>
+                            <p>Blood products: 4°C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Examples Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Code Examples</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Python -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">Python</h3>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre># Using Celsius symbol
+temperature = 25.5
+print(f"Temperature: {temperature}\u00B0C")
+
+# Constants
+CELSIUS_SYMBOL = "\u00B0C"
+print(f"Water boils at 100{CELSIUS_SYMBOL}")</pre>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">JavaScript</h3>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre>// Using Celsius symbol
+const temperature = 25.5;
+console.log(`Temperature: ${temperature}°C`);
+
+// In HTML
+document.getElementById('temp').innerHTML = '25°C';</pre>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">HTML</h3>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre>&lt;!-- HTML entities --&gt;
+&lt;p&gt;Temperature: 25&amp;deg;C&lt;/p&gt;
+&lt;p&gt;Water boils at 100&amp;#176;C&lt;/p&gt;
+
+&lt;!-- Unicode --&gt;
+&lt;p&gt;Body temperature: 37°C&lt;/p&gt;</pre>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3">CSS</h3>
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre>/* CSS content property */
+.temperature::after {
+    content: "°C";
+}
+
+/* Unicode in class names */
+.temp-celsius::before {
+    content: "\00B0C";
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Quick Conversion</h2>
+
+            <div class="bg-blue-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-4">Celsius to Fahrenheit Converter</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Celsius (°C)</label>
+                        <input type="number" id="celsiusInput" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter °C">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Fahrenheit (°F)</label>
+                        <input type="text" id="fahrenheitOutput" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100" placeholder="Result in °F" readonly>
+                    </div>
+                </div>
+                <div class="mt-4 p-3 bg-blue-100 rounded">
+                    <p class="text-sm"><strong>Formula:</strong> °F = (°C × 9/5) + 32</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">Should there be a space between ° and C?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">No, there should be no space between the degree symbol and C. The correct format is °C, not ° C. This follows international standards for temperature notation.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">Is it °C or ℃ (single character)?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Both are acceptable, but °C (two characters: degree symbol + C) is more commonly used and widely supported across all platforms. The single character ℃ (U+2103) exists but may not display correctly in all fonts.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">When did Celsius replace Centigrade?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">The term "Celsius" officially replaced "Centigrade" in 1948 as part of an international agreement to standardize temperature units. However, both terms refer to the same temperature scale.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">How do I type °C on a mobile device?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-4"></i>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">On most mobile devices, press and hold the 0 key to access the degree symbol (°), then type C immediately after it. Some keyboards may have the degree symbol in the symbols panel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Guides Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Related Guides</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="fahrenheit-degree-symbol.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Fahrenheit Symbol (°F)</h3>
+                    <p class="text-gray-600 text-sm">Learn about Fahrenheit degree symbol</p>
+                </a>
+
+                <a href="celsius-to-fahrenheit.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Temperature Converter</h3>
+                    <p class="text-gray-600 text-sm">Convert between Celsius and Fahrenheit</p>
+                </a>
+
+                <a href="how-to-type-degree-symbol-keyboard.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Keyboard Shortcuts</h3>
+                    <p class="text-gray-600 text-sm">Comprehensive keyboard shortcut guide</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">DegreeSymbol.app</h3>
+                    <p class="text-gray-600 text-sm">Your complete resource for degree symbols and temperature notation.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Tools</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="degrees-to-radians.html" class="hover:text-blue-600 transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="hover:text-blue-600 transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="hover:text-blue-600 transition">Code & Symbols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Guides</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="hover:text-blue-600 transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="hover:text-blue-600 transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="hover:text-blue-600 transition">Word Guide</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2024 DegreeSymbol.app. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy functionality
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = event.target.closest('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                button.classList.add('copy-success');
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copy-success');
+                }, 2000);
+            });
+        }
+
+        // Dropdown functionality
+        const toolsDropdownBtn = document.getElementById('toolsDropdownBtn');
+        const guidesDropdownBtn = document.getElementById('guidesDropdownBtn');
+        const toolsDropdown = document.getElementById('toolsDropdown');
+        const guidesDropdown = document.getElementById('guidesDropdown');
+
+        // Toggle dropdowns
+        toolsDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toolsDropdown.classList.toggle('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        guidesDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            guidesDropdown.classList.toggle('hidden');
+            toolsDropdown.classList.add('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', () => {
+            toolsDropdown.classList.add('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToolsBtn = document.getElementById('mobileToolsBtn');
+        const mobileGuidesBtn = document.getElementById('mobileGuidesBtn');
+        const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+        const mobileGuidesDropdown = document.getElementById('mobileGuidesDropdown');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileToolsBtn.addEventListener('click', () => {
+            mobileToolsDropdown.classList.toggle('hidden');
+        });
+
+        mobileGuidesBtn.addEventListener('click', () => {
+            mobileGuidesDropdown.classList.toggle('hidden');
+        });
+
+        // Temperature converter
+        const celsiusInput = document.getElementById('celsiusInput');
+        const fahrenheitOutput = document.getElementById('fahrenheitOutput');
+
+        celsiusInput.addEventListener('input', (e) => {
+            const celsius = parseFloat(e.target.value);
+            if (!isNaN(celsius)) {
+                const fahrenheit = (celsius * 9/5) + 32;
+                fahrenheitOutput.value = fahrenheit.toFixed(1) + '°F';
+            } else {
+                fahrenheitOutput.value = '';
+            }
+        });
+
+        // FAQ toggle functionality
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            faq.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Insert Degree Symbol in Revit | DegreeSymbol.app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .copy-button {
+            transition: all 0.3s ease;
+        }
+        .copy-button:hover {
+            transform: translateY(-2px);
+        }
+        .copy-success {
+            animation: copySuccess 0.6s ease;
+        }
+        @keyframes copySuccess {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">°</a>
+                    <span class="ml-2 text-xl font-semibold">DegreeSymbol.app</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                    <!-- Tools Dropdown -->
+                    <div class="relative">
+                        <button id="toolsDropdownBtn" class="flex items-center text-gray-600 hover:text-blue-600 transition">
+                            Tools <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="toolsDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="degrees-to-radians.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Angle Converter</a>
+                            <a href="celsius-to-fahrenheit.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Temperature Converter</a>
+                            <a href="degree-symbol-html.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Code & Symbols</a>
+                            <a href="degree-symbol-images.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Download</a>
+                            <a href="degree-symbol-icons.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Icon Pack</a>
+                        </div>
+                    </div>
+
+                    <!-- Guides Dropdown -->
+                    <div class="relative">
+                        <button id="guidesDropdownBtn" class="flex items-center text-blue-600">
+                            Guides <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="guidesDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="how-to-type-degree-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Mac</a>
+                            <a href="how-to-type-degree-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">iPhone</a>
+                            <a href="how-to-type-degree-symbol-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Windows</a>
+                            <a href="insert-degree-symbol-word.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Word</a>
+                            <a href="insert-degree-symbol-excel.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Excel</a>
+                            <a href="insert-degree-symbol-revit.html" class="block px-4 py-2 text-blue-600 bg-blue-50 font-medium">Revit</a>
+                            <a href="degree-symbol-latex.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">LaTeX</a>
+                            <a href="degree-symbol-python.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Python</a>
+                            <a href="celsius-degree-symbol.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Celsius</a>
+                            <a href="fahrenheit-degree-symbol.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Fahrenheit</a>
+                            <a href="degree-symbol-with-slash.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Slash Variant</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                <!-- Mobile Tools Dropdown -->
+                <div>
+                    <button id="mobileToolsBtn" class="flex items-center justify-between w-full py-2 text-gray-600 hover:text-blue-600 transition">
+                        Tools <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileToolsDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="degrees-to-radians.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Angle Converter</a>
+                        <a href="celsius-to-fahrenheit.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Temperature Converter</a>
+                        <a href="degree-symbol-html.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Code & Symbols</a>
+                        <a href="degree-symbol-images.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Download</a>
+                        <a href="degree-symbol-icons.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Icon Pack</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Guides Dropdown -->
+                <div>
+                    <button id="mobileGuidesBtn" class="flex items-center justify-between w-full py-2 text-blue-600">
+                        Guides <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileGuidesDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="how-to-type-degree-symbol-mac.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Mac</a>
+                        <a href="how-to-type-degree-symbol-iphone.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">iPhone</a>
+                        <a href="how-to-type-degree-symbol-keyboard.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Windows</a>
+                        <a href="insert-degree-symbol-word.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Word</a>
+                        <a href="insert-degree-symbol-excel.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Excel</a>
+                        <a href="insert-degree-symbol-revit.html" class="block py-1 text-blue-600 font-medium">Revit</a>
+                        <a href="degree-symbol-latex.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">LaTeX</a>
+                        <a href="degree-symbol-python.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Python</a>
+                        <a href="celsius-degree-symbol.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Celsius</a>
+                        <a href="fahrenheit-degree-symbol.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Fahrenheit</a>
+                        <a href="degree-symbol-with-slash.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Slash Variant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <a href="guides.html" class="text-blue-600 hover:text-blue-700 transition">&larr; Back to Guides</a>
+        </div>
+
+        <h1 class="text-4xl font-bold mb-6">How to Insert Degree Symbol in Revit</h1>
+
+        <p class="text-lg text-gray-700 mb-8">
+            Learn how to easily insert degree symbols (°) in Autodesk Revit for architectural drawings, annotations, and dimensions. This guide covers multiple methods for adding degree symbols in Revit projects.
+        </p>
+
+        <!-- Quick Copy Section -->
+        <section class="bg-blue-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Quick Copy</h2>
+            <div class="flex items-center space-x-4">
+                <span class="text-4xl font-bold">°</span>
+                <button onclick="copyText('°')" class="copy-button bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-copy mr-2"></i>Copy °
+                </button>
+            </div>
+        </section>
+
+        <!-- Methods Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Methods for Inserting Degree Symbol in Revit</h2>
+
+            <!-- Method 1: Text Editor -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-keyboard text-blue-600 mr-2"></i>Method 1: Using Revit Text Editor
+                </h3>
+                <p class="text-gray-700 mb-4">The most common method for adding degree symbols in Revit text annotations.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Select the Text tool from the Annotate tab</li>
+                    <li>Click where you want to place your text</li>
+                    <li>Type your text (e.g., "90")</li>
+                    <li>Right-click and select "Symbol" > "Degree Symbol"</li>
+                    <li>Or use the keyboard shortcut: <kbd class="bg-gray-200 px-2 py-1 rounded">Alt + 0176</kbd> (Windows)</li>
+                </ol>
+                <div class="mt-4 p-4 bg-blue-50 rounded">
+                    <p class="text-sm"><strong>Result:</strong> 90° - Perfect for dimensions and annotations</p>
+                </div>
+            </div>
+
+            <!-- Method 2: Copy and Paste -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-copy text-blue-600 mr-2"></i>Method 2: Copy and Paste
+                </h3>
+                <p class="text-gray-700 mb-4">Simple copy and paste method works well in all Revit text fields.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Copy the degree symbol: °</li>
+                    <li>Go to Revit and select your text tool</li>
+                    <li>Paste the symbol where needed: <kbd class="bg-gray-200 px-2 py-1 rounded">Ctrl + V</kbd></li>
+                    <li>Or use the Paste command from the context menu</li>
+                </ol>
+                <div class="mt-4 p-4 bg-yellow-50 rounded">
+                    <p class="text-sm"><strong>Tip:</strong> Create a text template with commonly used symbols for quick access</p>
+                </div>
+            </div>
+
+            <!-- Method 3: Dimension Text -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-ruler-combined text-blue-600 mr-2"></i>Method 3: In Dimension Text
+                </h3>
+                <p class="text-gray-700 mb-4">Add degree symbols to angular dimensions in your drawings.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Create an angular dimension using the Dimension tool</li>
+                    <li>Select the dimension</li>
+                    <li>Go to Properties > Edit Type</li>
+                    <li>Under "Text", add the degree symbol in the suffix field</li>
+                    <li>Or use the Unit Format settings to automatically include degrees</li>
+                </ol>
+                <div class="mt-4 p-4 bg-green-50 rounded">
+                    <p class="text-sm"><strong>Best Practice:</strong> Use Unit Format settings for consistency across the project</p>
+                </div>
+            </div>
+
+            <!-- Method 4: Family Parameters -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-cogs text-blue-600 mr-2"></i>Method 4: In Family Parameters
+                </h3>
+                <p class="text-gray-700 mb-4">Use degree symbols in family parameters for scheduling and tagging.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Open the Family Editor</li>
+                    <li>Create a new parameter or edit existing ones</li>
+                    <li>In the parameter value, include the degree symbol</li>
+                    <li>Use in formulas: <code>Angle + "°"</code></li>
+                    <li>The symbol will appear in schedules and tags</li>
+                </ol>
+            </div>
+
+            <!-- Method 5: Keyboard Shortcuts -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-keyboard text-blue-600 mr-2"></i>Method 5: Keyboard Shortcuts
+                </h3>
+                <p class="text-gray-700 mb-4">Use keyboard shortcuts for quick insertion in any text field.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-4 py-2 text-left">Platform</th>
+                                <th class="border border-gray-300 px-4 py-2 text-left">Shortcut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">Windows</td>
+                                <td class="border border-gray-300 px-4 py-2"><kbd class="bg-gray-200 px-2 py-1 rounded">Alt + 0176</kbd></td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">Mac</td>
+                                <td class="border border-gray-300 px-4 py-2"><kbd class="bg-gray-200 px-2 py-1 rounded">Option + Shift + 8</kbd></td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">Unicode</td>
+                                <td class="border border-gray-300 px-4 py-2"><kbd class="bg-gray-200 px-2 py-1 rounded">U+00B0</kbd></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Best Practices for Degree Symbols in Revit</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">
+                        <i class="fas fa-check-circle mr-2"></i>Do's
+                    </h3>
+                    <ul class="space-y-2 text-green-700">
+                        <li>✓ Use consistent formatting throughout the project</li>
+                        <li>✓ Create text templates for commonly used annotations</li>
+                        <li>✓ Use Unit Format settings for dimensions</li>
+                        <li>✓ Test symbols in different view scales</li>
+                        <li>✓ Document your annotation standards</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-red-800">
+                        <i class="fas fa-times-circle mr-2"></i>Don'ts
+                    </h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li>✗ Don't use different symbols in the same project</li>
+                        <li>✗ Don't place symbols too close to other text</li>
+                        <li>✗ Don't use symbols that are too small for the scale</li>
+                        <li>✗ Don't forget to check symbol appearance in PDF exports</li>
+                        <li>✗ Don't use image files when text symbols will work</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Uses Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Common Uses in Revit</h2>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Angular Dimensions</h3>
+                    <p class="text-gray-600 text-sm">45°, 90°, 180° angles in architectural drawings</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Temperature Notes</h3>
+                    <p class="text-gray-600 text-sm">20°C, 68°F in HVAC and mechanical plans</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Slope Annotations</h3>
+                    <p class="text-gray-600 text-sm">5° slope indicators for roof and site plans</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Geographic Orientation</h3>
+                    <p class="text-gray-600 text-sm">North arrows with degree bearings</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Structural Angles</h3>
+                    <p class="text-gray-600 text-sm">Beam and column angle specifications</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Lighting Design</h3>
+                    <p class="text-gray-600 text-sm">Fixture angles and beam spreads</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Troubleshooting</h2>
+
+            <div class="space-y-4">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">Symbol Not Displaying Correctly</h3>
+                    <p class="text-yellow-700">Check your font settings in the text type properties. Some fonts may not support the degree symbol properly.</p>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">Symbol Too Small or Large</h3>
+                    <p class="text-yellow-700">Adjust the text size in the type properties or use a separate text element for the symbol with different sizing.</p>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">Symbol Missing in PDF Export</h3>
+                    <p class="text-yellow-700">Ensure your PDF export settings preserve Unicode characters. Try different PDF export options if needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">Can I use degree symbols in Revit schedules?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Yes, you can use degree symbols in Revit schedules by including them in parameter values or calculated values. The symbol will display properly in schedule views and when exported.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">How do I make degree symbols appear in all views automatically?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Create dimension types with degree symbols in the suffix field, or use annotation families that include degree symbols. This ensures consistency across all views.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">Can I create a custom keyboard shortcut for degree symbols?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Revit doesn't support custom keyboard shortcuts for symbols, but you can use the Windows Alt+0176 shortcut or create a text template with pre-inserted symbols.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Guides Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Related Guides</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="how-to-type-degree-symbol-keyboard.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Keyboard Shortcuts</h3>
+                    <p class="text-gray-600 text-sm">Learn keyboard shortcuts for all platforms</p>
+                </a>
+
+                <a href="insert-degree-symbol-word.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Degree Symbol in Word</h3>
+                    <p class="text-gray-600 text-sm">Insert degree symbols in Microsoft Word</p>
+                </a>
+
+                <a href="degree-symbol-html.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">HTML Code</h3>
+                    <p class="text-gray-600 text-sm">HTML entities and Unicode codes</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">DegreeSymbol.app</h3>
+                    <p class="text-gray-600 text-sm">Your complete resource for degree symbols and temperature notation.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Tools</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="degrees-to-radians.html" class="hover:text-blue-600 transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="hover:text-blue-600 transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="hover:text-blue-600 transition">Code & Symbols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Guides</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="hover:text-blue-600 transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="hover:text-blue-600 transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="hover:text-blue-600 transition">Word Guide</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2024 DegreeSymbol.app. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy functionality
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = event.target.closest('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                button.classList.add('copy-success');
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copy-success');
+                }, 2000);
+            });
+        }
+
+        // Dropdown functionality
+        const toolsDropdownBtn = document.getElementById('toolsDropdownBtn');
+        const guidesDropdownBtn = document.getElementById('guidesDropdownBtn');
+        const toolsDropdown = document.getElementById('toolsDropdown');
+        const guidesDropdown = document.getElementById('guidesDropdown');
+
+        // Toggle dropdowns
+        toolsDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toolsDropdown.classList.toggle('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        guidesDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            guidesDropdown.classList.toggle('hidden');
+            toolsDropdown.classList.add('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', () => {
+            toolsDropdown.classList.add('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToolsBtn = document.getElementById('mobileToolsBtn');
+        const mobileGuidesBtn = document.getElementById('mobileGuidesBtn');
+        const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+        const mobileGuidesDropdown = document.getElementById('mobileGuidesDropdown');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileToolsBtn.addEventListener('click', () => {
+            mobileToolsDropdown.classList.toggle('hidden');
+        });
+
+        mobileGuidesBtn.addEventListener('click', () => {
+            mobileGuidesDropdown.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            faq.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>

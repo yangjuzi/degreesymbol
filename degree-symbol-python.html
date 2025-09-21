@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Symbol in Python | DegreeSymbol.app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .copy-button {
+            transition: all 0.3s ease;
+        }
+        .copy-button:hover {
+            transform: translateY(-2px);
+        }
+        .copy-success {
+            animation: copySuccess 0.6s ease;
+        }
+        @keyframes copySuccess {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .code-block {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .code-block pre {
+            margin: 0;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">°</a>
+                    <span class="ml-2 text-xl font-semibold">DegreeSymbol.app</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                    <!-- Tools Dropdown -->
+                    <div class="relative">
+                        <button id="toolsDropdownBtn" class="flex items-center text-gray-600 hover:text-blue-600 transition">
+                            Tools <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="toolsDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="degrees-to-radians.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Angle Converter</a>
+                            <a href="celsius-to-fahrenheit.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Temperature Converter</a>
+                            <a href="degree-symbol-html.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Code & Symbols</a>
+                            <a href="degree-symbol-images.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Download</a>
+                            <a href="degree-symbol-icons.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Icon Pack</a>
+                        </div>
+                    </div>
+
+                    <!-- Guides Dropdown -->
+                    <div class="relative">
+                        <button id="guidesDropdownBtn" class="flex items-center text-blue-600">
+                            Guides <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="guidesDropdown" class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden">
+                            <a href="how-to-type-degree-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Mac</a>
+                            <a href="how-to-type-degree-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">iPhone</a>
+                            <a href="how-to-type-degree-symbol-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Windows</a>
+                            <a href="insert-degree-symbol-word.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Word</a>
+                            <a href="insert-degree-symbol-excel.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Excel</a>
+                            <a href="insert-degree-symbol-revit.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Revit</a>
+                            <a href="degree-symbol-latex.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">LaTeX</a>
+                            <a href="degree-symbol-python.html" class="block px-4 py-2 text-blue-600 bg-blue-50 font-medium">Python</a>
+                            <a href="celsius-degree-symbol.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Celsius</a>
+                            <a href="fahrenheit-degree-symbol.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Fahrenheit</a>
+                            <a href="degree-symbol-with-slash.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Slash Variant</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+
+                <!-- Mobile Tools Dropdown -->
+                <div>
+                    <button id="mobileToolsBtn" class="flex items-center justify-between w-full py-2 text-gray-600 hover:text-blue-600 transition">
+                        Tools <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileToolsDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="degrees-to-radians.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Angle Converter</a>
+                        <a href="celsius-to-fahrenheit.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Temperature Converter</a>
+                        <a href="degree-symbol-html.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Code & Symbols</a>
+                        <a href="degree-symbol-images.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Download</a>
+                        <a href="degree-symbol-icons.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Icon Pack</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Guides Dropdown -->
+                <div>
+                    <button id="mobileGuidesBtn" class="flex items-center justify-between w-full py-2 text-blue-600">
+                        Guides <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobileGuidesDropdown" class="hidden pl-4 py-2 space-y-1">
+                        <a href="how-to-type-degree-symbol-mac.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Mac</a>
+                        <a href="how-to-type-degree-symbol-iphone.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">iPhone</a>
+                        <a href="how-to-type-degree-symbol-keyboard.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Windows</a>
+                        <a href="insert-degree-symbol-word.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Word</a>
+                        <a href="insert-degree-symbol-excel.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Excel</a>
+                        <a href="insert-degree-symbol-revit.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Revit</a>
+                        <a href="degree-symbol-latex.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">LaTeX</a>
+                        <a href="degree-symbol-python.html" class="block py-1 text-blue-600 font-medium">Python</a>
+                        <a href="celsius-degree-symbol.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Celsius</a>
+                        <a href="fahrenheit-degree-symbol.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Fahrenheit</a>
+                        <a href="degree-symbol-with-slash.html" class="block py-1 text-gray-600 hover:text-blue-600 transition">Slash Variant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <a href="guides.html" class="text-blue-600 hover:text-blue-700 transition">&larr; Back to Guides</a>
+        </div>
+
+        <h1 class="text-4xl font-bold mb-6">Degree Symbol in Python</h1>
+
+        <p class="text-lg text-gray-700 mb-8">
+            Learn how to use and display degree symbols (°) in Python for temperature displays, angle calculations, and scientific applications. This guide covers Unicode, encoding, and best practices.
+        </p>
+
+        <!-- Quick Copy Section -->
+        <section class="bg-blue-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Quick Copy</h2>
+            <div class="flex items-center space-x-4">
+                <span class="text-4xl font-bold">°</span>
+                <button onclick="copyText('°')" class="copy-button bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-copy mr-2"></i>Copy °
+                </button>
+            </div>
+        </section>
+
+        <!-- Methods Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Methods for Using Degree Symbol in Python</h2>
+
+            <!-- Method 1: Unicode -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-code text-blue-600 mr-2"></i>Method 1: Using Unicode Character
+                </h3>
+                <p class="text-gray-700 mb-4">Directly use the degree symbol in your Python code.</p>
+
+                <div class="code-block mb-4">
+                    <pre># Using the degree symbol directly
+temperature = 25.5
+print(f"Temperature: {temperature}°C")
+
+# Or using the symbol in a variable
+degree_symbol = "°"
+angle = 90
+print(f"Angle: {angle}{degree_symbol}")</pre>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded">
+                    <p class="text-sm"><strong>Output:</strong> Temperature: 25.5°C</p>
+                    <p class="text-sm"><strong>Output:</strong> Angle: 90°</p>
+                </div>
+            </div>
+
+            <!-- Method 2: Unicode Escape -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-code text-blue-600 mr-2"></i>Method 2: Unicode Escape Sequence
+                </h3>
+                <p class="text-gray-700 mb-4">Use the Unicode escape sequence for maximum compatibility.</p>
+
+                <div class="code-block mb-4">
+                    <pre># Using Unicode escape sequence
+temperature = 25.5
+print(f"Temperature: {temperature}\u00B0C")
+
+# Store as a constant
+DEGREE_SYMBOL = "\u00B0"
+angle = 45
+print(f"Angle: {angle}{DEGREE_SYMBOL}")</pre>
+                </div>
+
+                <div class="mt-4 p-4 bg-green-50 rounded">
+                    <p class="text-sm"><strong>Best Practice:</strong> Use \u00B0 for better encoding compatibility</p>
+                </div>
+            </div>
+
+            <!-- Method 3: UTF-8 Encoding -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-file-code text-blue-600 mr-2"></i>Method 3: UTF-8 File Encoding
+                </h3>
+                <p class="text-gray-700 mb-4">Ensure your Python files use UTF-8 encoding for special characters.</p>
+
+                <div class="code-block mb-4">
+                    <pre># Add this at the top of your Python file
+# -*- coding: utf-8 -*-
+
+# Now you can use degree symbols directly
+celsius = 20
+fahrenheit = 68
+print(f"{celsius}°C = {fahrenheit}°F")</pre>
+                </div>
+
+                <div class="mt-4 p-4 bg-yellow-50 rounded">
+                    <p class="text-sm"><strong>Tip:</strong> The encoding declaration should be on the first or second line</p>
+                </div>
+            </div>
+
+            <!-- Method 4: Chr Function -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-function text-blue-600 mr-2"></i>Method 4: Using chr() Function
+                </h3>
+                <p class="text-gray-700 mb-4">Generate the degree symbol using the chr() function.</p>
+
+                <div class="code-block mb-4">
+                    <pre># Using chr() function
+degree_symbol = chr(176)
+temperature = 30
+print(f"Temperature: {temperature}{degree_symbol}C")
+
+# Or in a function
+def format_temperature(temp, unit="C"):
+    return f"{temp}{chr(176)}{unit}"
+
+print(format_temperature(25, "C"))
+print(format_temperature(77, "F"))</pre>
+                </div>
+            </div>
+
+            <!-- Method 5: Constants -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">
+                    <i class="fas fa-constant text-blue-600 mr-2"></i>Method 5: Using Constants
+                </h3>
+                <p class="text-gray-700 mb-4">Define constants for consistent symbol usage across your project.</p>
+
+                <div class="code-block mb-4">
+                    <pre># Define constants
+DEGREE_SYMBOL = "\u00B0"
+CELSIUS = "C"
+FAHRENHEIT = "F"
+
+# Usage functions
+def to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return f"{celsius:.1f}{DEGREE_SYMBOL}{CELSIUS}"
+
+def to_fahrenheit(celsius):
+    fahrenheit = celsius * 9/5 + 32
+    return f"{fahrenheit:.1f}{DEGREE_SYMBOL}{FAHRENHEIT}"
+
+print(to_celsius(68))
+print(to_fahrenheit(20))</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Examples Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Practical Examples</h2>
+
+            <!-- Temperature Conversion -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Temperature Conversion Program</h3>
+
+                <div class="code-block mb-4">
+                    <pre>def convert_temperature(value, from_unit, to_unit):
+    """Convert temperature between Celsius and Fahrenheit"""
+    DEGREE = "\u00B0"
+
+    if from_unit.upper() == "C" and to_unit.upper() == "F":
+        result = value * 9/5 + 32
+        return f"{result:.1f}{DEGREE}F"
+    elif from_unit.upper() == "F" and to_unit.upper() == "C":
+        result = (value - 32) * 5/9
+        return f"{result:.1f}{DEGREE}C"
+    else:
+        return f"{value}{DEGREE}{from_unit}"
+
+# Examples
+print(convert_temperature(25, "C", "F"))  # 77.0°F
+print(convert_temperature(68, "F", "C"))  # 20.0°C</pre>
+                </div>
+            </div>
+
+            <!-- Angle Calculations -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Angle Calculations</h3>
+
+                <div class="code-block mb-4">
+                    <pre>import math
+
+def degrees_to_radians(degrees):
+    """Convert degrees to radians"""
+    return math.radians(degrees)
+
+def radians_to_degrees(radians):
+    """Convert radians to degrees"""
+    return math.degrees(radians)
+
+def format_angle(degrees):
+    """Format angle with degree symbol"""
+    return f"{degrees:.1f}\u00B0"
+
+# Examples
+angle_deg = 90
+angle_rad = degrees_to_radians(angle_deg)
+print(f"{angle_deg}\u00B0 = {angle_rad:.4f} radians")
+
+angle_rad = math.pi / 4
+angle_deg = radians_to_degrees(angle_rad)
+print(f"{angle_rad:.4f} radians = {format_angle(angle_deg)}")</pre>
+                </div>
+            </div>
+
+            <!-- Weather Application -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Weather Data Processing</h3>
+
+                <div class="code-block mb-4">
+                    <pre>class WeatherData:
+    def __init__(self, temperature, humidity, pressure):
+        self.temperature = temperature
+        self.humidity = humidity
+        self.pressure = pressure
+        self.DEGREE = "\u00B0"
+
+    def display_celsius(self):
+        return f"Temperature: {self.temperature}{self.DEGREE}C"
+
+    def display_fahrenheit(self):
+        temp_f = self.temperature * 9/5 + 32
+        return f"Temperature: {temp_f:.1f}{self.DEGREE}F"
+
+    def weather_report(self):
+        return (f"{self.display_celsius()}\n"
+                f"Humidity: {self.humidity}%\n"
+                f"Pressure: {self.pressure} hPa")
+
+# Usage
+weather = WeatherData(22, 65, 1013)
+print(weather.weather_report())</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Best Practices</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">
+                        <i class="fas fa-check-circle mr-2"></i>Do's
+                    </h3>
+                    <ul class="space-y-2 text-green-700">
+                        <li>✓ Use UTF-8 encoding for your Python files</li>
+                        <li>✓ Define constants for frequently used symbols</li>
+                        <li>✓ Use Unicode escape sequences for compatibility</li>
+                        <li>✓ Test symbol display in different environments</li>
+                        <li>✓ Handle encoding errors gracefully</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-red-800">
+                        <i class="fas fa-times-circle mr-2"></i>Don'ts
+                    </h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li>✗ Don't assume all terminals support Unicode</li>
+                        <li>✗ Don't hardcode symbols without encoding declaration</li>
+                        <li>✗ Don't mix different symbol representations</li>
+                        <li>✗ Don't forget to handle file encoding when reading/writing</li>
+                        <li>✗ Don't use images when text symbols work better</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Issues Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Common Issues and Solutions</h2>
+
+            <div class="space-y-4">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">UnicodeEncodeError</h3>
+                    <p class="text-yellow-700 mb-2">Error when printing degree symbols to console.</p>
+                    <div class="code-block text-sm">
+                        <pre># Solution: Use proper encoding
+import sys
+import io
+
+# Set stdout encoding
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+# Or use environment variables
+# export PYTHONIOENCODING=utf-8</pre>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">File Encoding Issues</h3>
+                    <p class="text-yellow-700 mb-2">Problems reading/writing files with degree symbols.</p>
+                    <div class="code-block text-sm">
+                        <pre># Solution: Always specify encoding
+with open('data.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+with open('output.txt', 'w', encoding='utf-8') as f:
+    f.write(f"Temperature: 25\u00B0C")</pre>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="font-semibold mb-2 text-yellow-800">Web Display Issues</h3>
+                    <p class="text-yellow-700 mb-2">Degree symbols not showing correctly in web applications.</p>
+                    <div class="code-block text-sm">
+                        <pre># Solution: Use proper content type
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Temperature: 25\u00B0C", 200, {'Content-Type': 'text/html; charset=utf-8'}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Library Integration Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Library Integration</h2>
+
+            <!-- Matplotlib -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Matplotlib Plots</h3>
+
+                <div class="code-block mb-4">
+                    <pre>import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate data
+angles = np.linspace(0, 360, 100)
+radians = np.radians(angles)
+sine_values = np.sin(radians)
+
+# Create plot
+plt.figure(figsize=(10, 6))
+plt.plot(angles, sine_values)
+plt.xlabel(f'Angle (\u00B0)')
+plt.ylabel('sin(\u03B8)')
+plt.title('Sine Function')
+plt.grid(True)
+plt.show()</pre>
+                </div>
+            </div>
+
+            <!-- Pandas -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Pandas DataFrames</h3>
+
+                <div class="code-block mb-4">
+                    <pre>import pandas as pd
+
+# Create DataFrame with temperature data
+data = {
+    'City': ['New York', 'London', 'Tokyo'],
+    'Temperature (°C)': [22, 18, 25],
+    'Humidity (%)': [65, 70, 60]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+# Export to CSV with proper encoding
+df.to_csv('weather_data.csv', encoding='utf-8', index=False)</pre>
+                </div>
+            </div>
+
+            <!-- Tkinter GUI -->
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-3">Tkinter GUI Applications</h3>
+
+                <div class="code-block mb-4">
+                    <pre>import tkinter as tk
+from tkinter import ttk
+
+def convert_temperature():
+    try:
+        celsius = float(entry.get())
+        fahrenheit = celsius * 9/5 + 32
+        result_label.config(text=f"{fahrenheit:.1f}\u00B0F")
+    except ValueError:
+        result_label.config(text="Invalid input")
+
+# Create GUI
+root = tk.Tk()
+root.title("Temperature Converter")
+
+tk.Label(root, text="Celsius:").grid(row=0, column=0, padx=5, pady=5)
+entry = tk.Entry(root)
+entry.grid(row=0, column=1, padx=5, pady=5)
+
+tk.Button(root, text="Convert", command=convert_temperature).grid(row=1, column=0, columnspan=2, pady=5)
+result_label = tk.Label(root, text="", font=("Arial", 12))
+result_label.grid(row=2, column=0, columnspan=2, pady=5)
+
+root.mainloop()</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">What's the best way to handle degree symbols in Python?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">The best approach is to use UTF-8 encoding for your files and either use the degree symbol directly or the Unicode escape sequence \u00B0 for maximum compatibility.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">How do I handle degree symbols in file operations?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Always specify encoding='utf-8' when opening files for reading or writing. This ensures proper handling of Unicode characters like the degree symbol.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">Can I use degree symbols in Python strings for web applications?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Yes, but ensure your web framework properly handles UTF-8 encoding. Set the content-type header to include charset=utf-8 for proper display.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition">
+                        <span class="font-semibold">How do I handle degree symbols in different operating systems?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-4"></i>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Use consistent UTF-8 encoding across all platforms. Avoid platform-specific solutions and stick to Unicode standards for cross-platform compatibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Guides Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-6">Related Guides</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="degree-symbol-html.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">HTML & CSS</h3>
+                    <p class="text-gray-600 text-sm">Degree symbols in web development</p>
+                </a>
+
+                <a href="degree-symbol-latex.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">LaTeX</h3>
+                    <p class="text-gray-600 text-sm">Degree symbols in LaTeX documents</p>
+                </a>
+
+                <a href="celsius-to-fahrenheit.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Temperature Converter</h3>
+                    <p class="text-gray-600 text-sm">Convert between temperature units</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">DegreeSymbol.app</h3>
+                    <p class="text-gray-600 text-sm">Your complete resource for degree symbols and temperature notation.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Tools</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="degrees-to-radians.html" class="hover:text-blue-600 transition">Angle Converter</a></li>
+                        <li><a href="celsius-to-fahrenheit.html" class="hover:text-blue-600 transition">Temperature Converter</a></li>
+                        <li><a href="degree-symbol-html.html" class="hover:text-blue-600 transition">Code & Symbols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Guides</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="how-to-type-degree-symbol-mac.html" class="hover:text-blue-600 transition">Mac Guide</a></li>
+                        <li><a href="how-to-type-degree-symbol-keyboard.html" class="hover:text-blue-600 transition">Keyboard Shortcuts</a></li>
+                        <li><a href="insert-degree-symbol-word.html" class="hover:text-blue-600 transition">Word Guide</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2024 DegreeSymbol.app. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy functionality
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = event.target.closest('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                button.classList.add('copy-success');
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copy-success');
+                }, 2000);
+            });
+        }
+
+        // Dropdown functionality
+        const toolsDropdownBtn = document.getElementById('toolsDropdownBtn');
+        const guidesDropdownBtn = document.getElementById('guidesDropdownBtn');
+        const toolsDropdown = document.getElementById('toolsDropdown');
+        const guidesDropdown = document.getElementById('guidesDropdown');
+
+        // Toggle dropdowns
+        toolsDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toolsDropdown.classList.toggle('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        guidesDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            guidesDropdown.classList.toggle('hidden');
+            toolsDropdown.classList.add('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', () => {
+            toolsDropdown.classList.add('hidden');
+            guidesDropdown.classList.add('hidden');
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToolsBtn = document.getElementById('mobileToolsBtn');
+        const mobileGuidesBtn = document.getElementById('mobileGuidesBtn');
+        const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+        const mobileGuidesDropdown = document.getElementById('mobileGuidesDropdown');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileToolsBtn.addEventListener('click', () => {
+            mobileToolsDropdown.classList.toggle('hidden');
+        });
+
+        mobileGuidesBtn.addEventListener('click', () => {
+            mobileGuidesDropdown.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            faq.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
