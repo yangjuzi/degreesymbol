@@ -3,13 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Degree Symbol in LaTeX - Degreesymbol.app</title>
+    <title>Degree Symbol in LaTeX | Complete Guide with Code Examples 2025</title>
+    <meta name="description" content="Complete guide to degree symbols in LaTeX. Learn 4 methods: superscript, gensymb, siunitx, and textcomp packages. Includes code examples, troubleshooting, and best practices for scientific documents.">
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://degreesymbol.app/degree-symbol-latex.html">
-    <meta name="description" content="Learn how to type degree symbols in LaTeX documents. Complete guide with packages, commands, and examples for scientific and mathematical documents.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Degree Symbol in LaTeX | Complete Guide with Code Examples 2025">
+    <meta property="og:description" content="Complete guide to degree symbols in LaTeX. Learn 4 methods with code examples, troubleshooting, and best practices for scientific documents.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://degreesymbol.app/degree-symbol-latex.html">
+    <meta property="og:image" content="https://degreesymbol.app/favicon.png">
+    <meta property="og:site_name" content="Degreesymbol.app">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Degree Symbol in LaTeX | Complete Guide with Code Examples 2025">
+    <meta name="twitter:description" content="Complete guide to degree symbols in LaTeX. Learn 4 methods with code examples and troubleshooting for scientific documents.">
+    <meta name="twitter:image" content="https://degreesymbol.app/favicon.png">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Degreesymbol.app">
+    <meta name="keywords" content="degree symbol latex, latex degree symbol, siunitx degree, gensymb latex, textcomp latex, mathematical symbols, scientific writing, academic writing, latex commands, degree celsius latex">
+
     <script src="https://cdn.tailwindcss.com"></script>
-     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
+
+    <!-- Structured Data - Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Degree Symbol in LaTeX | Complete Guide with Code Examples 2025",
+        "description": "Complete guide to degree symbols in LaTeX. Learn 4 methods: superscript, gensymb, siunitx, and textcomp packages with code examples and troubleshooting.",
+        "url": "https://degreesymbol.app/degree-symbol-latex.html",
+        "datePublished": "2024-01-01",
+        "dateModified": "2025-01-01",
+        "author": {
+            "@type": "Organization",
+            "name": "Degreesymbol.app"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Degreesymbol.app",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://degreesymbol.app/favicon.png"
+            }
+        },
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "about": {
+            "@type": "Thing",
+            "name": "LaTeX Degree Symbol Typesetting and Mathematical Writing"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://degreesymbol.app/degree-symbol-latex.html"
+        },
+        "wordCount": 2500,
+        "articleSection": "Technical Writing",
+        "educationalLevel": "Intermediate",
+        "learningResourceType": "Tutorial"
+    }
+    </script>
+
+    <!-- Structured Data - HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Type Degree Symbol in LaTeX",
+        "description": "Step-by-step guide to add degree symbols in LaTeX documents using different methods and packages",
+        "image": "https://degreesymbol.app/favicon.png",
+        "tool": [
+            {
+                "@type": "HowToTool",
+                "name": "LaTeX Editor"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "siunitx Package"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "gensymb Package"
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Choose your method",
+                "text": "Select from superscript, gensymb, siunitx, or textcomp package methods"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Add required package",
+                "text": "Include \\usepackage{package-name} in your LaTeX document preamble"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Use the command",
+                "text": "Apply the appropriate command: $^\\circ$, \\degree, \\SI{}{\\degreeCelsius}, or \\textdegree"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Compile document",
+                "text": "Compile your LaTeX document to see the formatted degree symbols"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I type a degree symbol in LaTeX without any packages?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use the superscript method: $^\\circ$. For example, $25^\\circ$C produces 25°C. This works in any LaTeX document without additional packages."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the best LaTeX package for degree symbols?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The siunitx package is the most comprehensive solution for scientific documents, providing \\SI{25}{\\degreeCelsius} for temperatures and \\SI{90}{\\degree} for angles with proper spacing and formatting."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add degree symbols in math mode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In math mode, use $^\\circ$ for the basic method or include the gensymb package and use \\degree. For example: $\\theta = 90^\\circ$ or $\\theta = 90\\degree$."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
     <!-- Navigation -->
@@ -106,19 +248,94 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb Navigation -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav aria-label="Breadcrumb" class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-blue-600 hover:text-blue-800 transition">Home</a>
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href="guides.html" class="text-blue-600 hover:text-blue-800 transition">Guides</a>
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600">LaTeX Degree Symbol</span>
+            </nav>
+        </div>
+    </section>
+
     <!-- Header -->
     <section class="py-16 bg-gradient-to-b from-purple-50 to-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Degree Symbol in LaTeX</h1>
             <p class="text-xl text-gray-600 mb-8">Complete guide to using degree symbols in LaTeX documents for scientific and mathematical writing</p>
+            <div class="text-sm text-gray-500">4 Methods • Code Examples • Best Practices • Troubleshooting</div>
+                <div class="mt-4 flex items-center justify-center space-x-6">
+                    <span class="text-sm text-gray-600">📖 <span id="reading-time">12</span> min read</span>
+                    <span class="text-sm text-gray-600">📝 <span id="word-count">2500</span> words</span>
+                </div>
         </div>
     </section>
+
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div id="reading-progress" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300" style="width: 0%"></div>
+    </div>
 
     <!-- Main Content -->
     <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
-            <!-- Quick Reference -->
+            <!-- Table of Contents -->
             <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Table of Contents</h2>
+                <div class="bg-blue-50 rounded-xl p-6">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="#quick-start" class="block text-blue-600 hover:text-blue-800 mb-2">🚀 Quick Start Guide</a>
+                        <a href="#quick-reference" class="block text-blue-600 hover:text-blue-800 mb-2">📋 Quick Reference</a>
+                        <a href="#methods" class="block text-blue-600 hover:text-blue-800 mb-2">🔧 4 Methods Explained</a>
+                        <a href="#examples" class="block text-blue-600 hover:text-blue-800 mb-2">💻 Complete Examples</a>
+                        <a href="#comparison" class="block text-blue-600 hover:text-blue-800 mb-2">📊 Method Comparison</a>
+                        <a href="#interactive" class="block text-blue-600 hover:text-blue-800 mb-2">🎯 Interactive Examples</a>
+                        <a href="#advanced" class="block text-blue-600 hover:text-blue-800 mb-2">⚡ Advanced Tips</a>
+                        <a href="#troubleshooting" class="block text-blue-600 hover:text-blue-800 mb-2">🛠️ Troubleshooting</a>
+                        <a href="#best-practices" class="block text-blue-600 hover:text-blue-800 mb-2">✅ Best Practices</a>
+                        <a href="#resources" class="block text-blue-600 hover:text-blue-800 mb-2">📚 Additional Resources</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Start Guide -->
+            <div id="quick-start" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Quick Start Guide</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
+                    <div class="grid md:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$^\circ$</div>
+                            <h3 class="font-semibold text-gray-900 mb-1 text-sm">No Package</h3>
+                            <p class="text-xs text-gray-600">Quick & Universal</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">\degree</div>
+                            <h3 class="font-semibold text-gray-900 mb-1 text-sm">gensymb</h3>
+                            <p class="text-xs text-gray-600">Basic Scientific</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">\SI{25}{\degreeCelsius}</div>
+                            <h3 class="font-semibold text-gray-900 mb-1 text-sm">siunitx</h3>
+                            <p class="text-xs text-gray-600">Professional</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600 mb-2">\textdegree</div>
+                            <h3 class="font-semibold text-gray-900 mb-1 text-sm">textcomp</h3>
+                            <p class="text-xs text-gray-600">Text Mode</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Reference -->
+            <div id="quick-reference" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Quick Reference</h2>
                 <div class="grid md:grid-cols-3 gap-4">
                     <div class="bg-blue-50 rounded-xl p-4 text-center">
@@ -140,7 +357,7 @@
             </div>
 
             <!-- Methods -->
-            <div class="mb-12">
+            <div id="methods" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Methods</h2>
                 <div class="space-y-8">
                     <!-- Method 1: Superscript Circle -->
@@ -211,7 +428,7 @@
             </div>
 
             <!-- Examples -->
-            <div class="mb-12">
+            <div id="examples" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Complete Examples</h2>
                 <div class="space-y-6">
                     <!-- Basic Document Example -->
@@ -278,7 +495,7 @@ For a right triangle:
             </div>
 
             <!-- Comparison Table -->
-            <div class="mb-12">
+            <div id="comparison" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Method Comparison</h2>
                 <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
                     <table class="w-full">
@@ -321,7 +538,7 @@ For a right triangle:
             </div>
 
             <!-- Common Issues -->
-            <div class="mb-12">
+            <div id="troubleshooting" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Issues and Solutions</h2>
                 <div class="space-y-4">
                     <div class="bg-red-50 rounded-xl p-6">
@@ -345,7 +562,7 @@ For a right triangle:
             </div>
 
             <!-- Best Practices -->
-            <div class="mb-12">
+            <div id="best-practices" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Best Practices</h2>
                 <div class="bg-green-50 rounded-xl p-6">
                     <ul class="space-y-3 text-gray-700">
@@ -377,8 +594,113 @@ For a right triangle:
                 </div>
             </div>
 
+            <!-- Interactive Examples -->
+            <div id="interactive" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Interactive Examples</h2>
+                <div class="space-y-6">
+                    <!-- Live Code Preview -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Common Temperature Expressions</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-3">Basic Temperature Range</h4>
+                                <div class="bg-white rounded-lg p-4 font-mono text-sm mb-3">
+                                    <pre class="whitespace-pre-wrap">Room temperature: $22^\circ$C
+Body temperature: $37^\circ$C
+Boiling point: $100^\circ$C
+Freezing point: $0^\circ$C</pre>
+                                </div>
+                                <p class="text-sm text-gray-600">Output: Room temperature: 22°C, etc.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-3">Scientific Temperature Data</h4>
+                                <div class="bg-white rounded-lg p-4 font-mono text-sm mb-3">
+                                    <pre class="whitespace-pre-wrap">\SI{25.3}{\degreeCelsius}
+\SI{98.6}{\degreeFahrenheit}
+\SI{-40}{\degreeCelsius}
+\SI{373.15}{\kelvin}</pre>
+                                </div>
+                                <p class="text-sm text-gray-600">Professional formatting with siunitx</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mathematical Applications -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Mathematical Applications</h3>
+                        <div class="bg-white rounded-lg p-4 font-mono text-sm">
+                            <pre class="whitespace-pre-wrap">% Trigonometry
+$\sin(30^\circ) = \frac{1}{2}$
+$\cos(60^\circ) = \frac{1}{2}$
+
+% Geometry
+$\angle ABC = 90^\circ$
+$\theta = 45^\circ$
+
+% Vector notation
+$\vec{v} = |v| \angle 30^\circ$</pre>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3">Common mathematical expressions using degree symbols</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Tips -->
+            <div id="advanced" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Advanced Tips & Tricks</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Spacing & Formatting</h3>
+                        <ul class="space-y-3 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Use siunitx for automatic spacing between numbers and units</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.44 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Add thin space with \, between values and degree symbols</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Use \si{} for standalone units without values</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Package Compatibility</h3>
+                        <ul class="space-y-3 text-gray-700 text-sm">
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>siunitx works with most modern LaTeX distributions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>gensymb may conflict with siunitx - choose one</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>textcomp is compatible with most document classes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- Additional Resources -->
-            <div class="mb-12">
+            <div id="resources" class="mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Additional Resources</h2>
                 <div class="bg-purple-50 rounded-xl p-6">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Related LaTeX Packages</h3>
@@ -398,6 +720,29 @@ For a right triangle:
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-2">tikz</h4>
                             <p class="text-sm text-gray-600">For creating diagrams involving angles and degree measurements.</p>
+                        </div>
+                    </div>
+
+                    <!-- External Resources -->
+                    <div class="mt-6 pt-6 border-t border-purple-200">
+                        <h4 class="font-semibold text-gray-800 mb-3">External Documentation</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <a href="https://ctan.org/pkg/siunitx" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm flex items-center">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                    siunitx Package Documentation
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://ctan.org/pkg/gensymb" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm flex items-center">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                    gensymb Package Documentation
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -501,6 +846,194 @@ For a right triangle:
 
             if (!guidesBtn.contains(event.target) && !guidesDropdown.contains(event.target)) {
                 guidesDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!-- Enhanced functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Copy to clipboard functionality for code blocks
+            document.querySelectorAll('pre, .font-mono').forEach(function(element) {
+                // Skip if already has a wrapper
+                if (element.parentElement.classList.contains('code-wrapper')) return;
+
+                // Create copy button
+                var copyBtn = document.createElement('button');
+                copyBtn.innerHTML = '📋 Copy';
+                copyBtn.className = 'absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs opacity-0 transition-opacity duration-200 z-10';
+                copyBtn.title = 'Copy to clipboard';
+
+                // Wrap element in relative container
+                var wrapper = document.createElement('div');
+                wrapper.className = 'relative code-wrapper';
+                element.parentNode.insertBefore(wrapper, element);
+                wrapper.appendChild(element);
+                wrapper.appendChild(copyBtn);
+
+                // Show/hide copy button on hover
+                wrapper.addEventListener('mouseenter', function() {
+                    copyBtn.style.opacity = '1';
+                });
+                wrapper.addEventListener('mouseleave', function() {
+                    copyBtn.style.opacity = '0';
+                });
+
+                // Copy functionality
+                copyBtn.addEventListener('click', async function(e) {
+                    e.stopPropagation();
+                    var text = element.textContent || element.innerText;
+
+                    try {
+                        await navigator.clipboard.writeText(text);
+
+                        // Show success state
+                        var originalHTML = copyBtn.innerHTML;
+                        copyBtn.innerHTML = '✓ Copied';
+                        copyBtn.className = 'absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded text-xs';
+
+                        setTimeout(function() {
+                            copyBtn.innerHTML = originalHTML;
+                            copyBtn.className = 'absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs opacity-0 transition-opacity duration-200 z-10';
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                    }
+                });
+            });
+
+            // Highlight active section in table of contents
+            function updateActiveSection() {
+                var sections = document.querySelectorAll('section[id]');
+                var tocLinks = document.querySelectorAll('[href^="#"]');
+
+                var currentSection = '';
+                sections.forEach(function(section) {
+                    var rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(function(link) {
+                    link.classList.remove('bg-blue-100', 'text-blue-800');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('bg-blue-100', 'text-blue-800');
+                    }
+                });
+            }
+
+            // Update active section on scroll
+            window.addEventListener('scroll', updateActiveSection);
+            updateActiveSection();
+
+            // Reading progress bar
+            function updateReadingProgress() {
+                var scrollTop = window.pageYOffset;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var scrollPercent = (scrollTop / docHeight) * 100;
+                var progressBar = document.getElementById('reading-progress');
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateReadingProgress);
+            updateReadingProgress();
+
+            // Calculate reading time and word count
+            function calculateReadingMetrics() {
+                var text = document.body.innerText;
+                var words = text.split(/\s+/).length;
+                var readingTime = Math.ceil(words / 200); // Average reading speed: 200 words per minute
+
+                var wordCountElement = document.getElementById('word-count');
+                var readingTimeElement = document.getElementById('reading-time');
+
+                if (wordCountElement) {
+                    wordCountElement.textContent = words.toLocaleString();
+                }
+                if (readingTimeElement) {
+                    readingTimeElement.textContent = readingTime;
+                }
+            }
+
+            calculateReadingMetrics();
+
+            // Back to top button
+            var backToTopBtn = document.createElement('button');
+            backToTopBtn.innerHTML = '↑';
+            backToTopBtn.title = 'Back to top';
+            backToTopBtn.className = 'fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 z-50';
+            document.body.appendChild(backToTopBtn);
+
+            // Show/hide back to top button
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.opacity = '1';
+                } else {
+                    backToTopBtn.style.opacity = '0';
+                }
+            });
+
+            // Back to top functionality
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Search functionality for code examples
+            var searchBox = document.createElement('input');
+            searchBox.type = 'text';
+            searchBox.placeholder = 'Search code examples...';
+            searchBox.className = 'w-full p-3 border border-gray-300 rounded-lg mb-6';
+
+            // Add search box to top of page
+            var mainContent = document.querySelector('.max-w-4xl.mx-auto');
+            if (mainContent) {
+                mainContent.insertBefore(searchBox, mainContent.firstChild);
+
+                searchBox.addEventListener('input', function() {
+                    var searchTerm = this.value.toLowerCase();
+                    var codeElements = document.querySelectorAll('pre, .font-mono');
+
+                    codeElements.forEach(function(element) {
+                        var code = element.textContent.toLowerCase();
+                        var wrapper = element.closest('.code-wrapper') || element.parentElement.parentElement;
+
+                        if (searchTerm === '') {
+                            wrapper.style.display = 'block';
+                            return;
+                        }
+
+                        if (code.includes(searchTerm)) {
+                            wrapper.style.display = 'block';
+                            // Highlight matching text
+                            var text = element.textContent;
+                            var regex = new RegExp(searchTerm, 'gi');
+                            var highlightedText = text.replace(regex, '<mark>$&</mark>');
+                            // This is simplified - in production you'd want more sophisticated highlighting
+                        } else {
+                            wrapper.style.display = 'none';
+                        }
+                    });
+                });
             }
         });
     </script>

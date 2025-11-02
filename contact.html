@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Degreesymbol.app</title>
-    <meta name="description" content="Get in touch with the Degreesymbol.app team. We welcome feedback, suggestions, and questions about our degree symbol resources and tools.">
+    <title>Contact Degreesymbol.app - Get in Touch with Our Team</title>
+    <meta name="description" content="Contact the Degreesymbol.app team for feedback, suggestions, or questions about our degree symbol resources and tools. We respond within 24-48 hours.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://degreesymbol.app/contact.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Degreesymbol.app - Get in Touch with Our Team">
+    <meta property="og:description" content="Contact the Degreesymbol.app team for feedback, suggestions, or questions about our degree symbol resources and tools. We respond within 24-48 hours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://degreesymbol.app/contact.html">
+    <meta property="og:image" content="https://degreesymbol.app/favicon.png">
+    <meta property="og:site_name" content="Degreesymbol.app">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Degreesymbol.app - Get in Touch with Our Team">
+    <meta name="twitter:description" content="Contact the Degreesymbol.app team for feedback, suggestions, or questions about our degree symbol resources and tools. We respond within 24-48 hours.">
+    <meta name="twitter:image" content="https://degreesymbol.app/favicon.png">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Degreesymbol.app">
+    <meta name="keywords" content="contact degreesymbol.app, support, feedback, degree symbol help, customer service, technical support">
+
     <script src="https://cdn.tailwindcss.com"></script>
-     
+
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
+
+    <!-- Structured Data - ContactPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Degreesymbol.app",
+        "description": "Contact the Degreesymbol.app team for feedback, suggestions, or questions about our degree symbol resources and tools",
+        "url": "https://degreesymbol.app/contact.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Degreesymbol.app",
+            "url": "https://degreesymbol.app"
+        },
+        "dateModified": "2025-01-01",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "mainContentOfPage": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@degreesymbol.app",
+            "availableLanguage": ["English"],
+            "hoursAvailable": "Mo-Fr 09:00-17:00"
+        }
+    }
+    </script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
     <!-- Navigation -->
@@ -110,6 +160,19 @@
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
             <p class="text-xl text-gray-600 mb-8">We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav aria-label="Breadcrumb" class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-blue-600 hover:text-blue-800 transition">Home</a>
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600">Contact Us</span>
+            </nav>
         </div>
     </section>
 
@@ -320,12 +383,119 @@
             }
         });
 
-        // Form submission
+        // Form submission with validation
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Validation
+            if (!name) {
+                showError('Please enter your name');
+                return;
+            }
+
+            if (!email) {
+                showError('Please enter your email address');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                showError('Please enter a valid email address');
+                return;
+            }
+
+            if (!subject) {
+                showError('Please select a subject');
+                return;
+            }
+
+            if (!message || message.length < 10) {
+                showError('Please enter a message with at least 10 characters');
+                return;
+            }
+
+            // Create mailto link
+            const subjectLine = encodeURIComponent(`${subject} - ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:contact@degreesymbol.app?subject=${subjectLine}&body=${body}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            setTimeout(() => {
+                showSuccess('Thank you for your message! Your email client should open automatically. If not, please send us an email directly at contact@degreesymbol.app');
+                this.reset();
+            }, 1000);
         });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function showError(message) {
+            // Remove any existing alerts
+            const existingAlert = document.querySelector('.form-alert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'form-alert bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4';
+            alertDiv.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+
+            const form = document.querySelector('form');
+            form.parentNode.insertBefore(alertDiv, form);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+
+        function showSuccess(message) {
+            // Remove any existing alerts
+            const existingAlert = document.querySelector('.form-alert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'form-alert bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4';
+            alertDiv.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>${message}</span>
+                </div>
+            `;
+
+            const form = document.querySelector('form');
+            form.parentNode.insertBefore(alertDiv, form);
+
+            // Auto remove after 8 seconds
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 8000);
+        }
     </script>
 </body>
 </html>

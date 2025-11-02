@@ -3,10 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angle Converter – Degrees ↔ Radians - Degreesymbol.app</title>
-    <meta name="description" content="Instant angle converter tool for degrees to radians and radians to degrees conversion. Perfect for mathematics, physics, and engineering calculations.">
+    <title>Angle Converter: Degrees to Radians & Radians to Degrees | DegreeSymbol.app</title>
+    <meta name="description" content="Free online angle converter tool for instant degrees to radians and radians to degrees conversion. Perfect for mathematics, physics, engineering, and trigonometry calculations with precision accuracy.">
+    <meta name="keywords" content="angle converter, degrees to radians, radians to degrees, angle conversion, trigonometry, mathematics, physics, engineering, calculator, degree radian conversion">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://degreesymbol.app/degrees-to-radians.html">
+    <meta property="og:title" content="Angle Converter: Degrees to Radians & Radians to Degrees">
+    <meta property="og:description" content="Free online angle converter for instant degrees to radians and radians to degrees conversion. Perfect for mathematics, physics, and engineering.">
+    <meta property="og:image" content="https://degreesymbol.app/images/angle-converter-social.jpg">
+    <meta property="og:site_name" content="DegreeSymbol.app">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://degreesymbol.app/degrees-to-radians.html">
+    <meta property="twitter:title" content="Angle Converter: Degrees to Radians & Radians to Degrees">
+    <meta property="twitter:description" content="Free online angle converter for instant degrees to radians and radians to degrees conversion. Perfect for mathematics, physics, and engineering.">
+    <meta property="twitter:image" content="https://degreesymbol.app/images/angle-converter-social.jpg">
+
+    <!-- Additional SEO -->
+    <meta name="author" content="DegreeSymbol.app">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="geo.region" content="US">
+    <meta name="revisit-after" content="7 days">
+    <link rel="alternate" hreflang="en" href="https://degreesymbol.app/degrees-to-radians.html">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#webapp",
+          "name": "Angle Converter - Degrees to Radians",
+          "description": "Free online angle converter tool for instant degrees to radians and radians to degrees conversion with precision accuracy",
+          "url": "https://degreesymbol.app/degrees-to-radians.html",
+          "applicationCategory": "CalculatorApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "HTML5, JavaScript",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Real-time conversion",
+            "Degrees to radians conversion",
+            "Radians to degrees conversion",
+            "Common angle references",
+            "Conversion formulas",
+            "Mobile responsive design"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#software",
+          "name": "Angle Conversion Calculator",
+          "description": "Interactive angle conversion tool for mathematics, physics, and engineering applications",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "author": {
+            "@type": "Organization",
+            "name": "DegreeSymbol.app",
+            "url": "https://degreesymbol.app"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#howto",
+          "name": "How to Convert Degrees to Radians",
+          "description": "Step-by-step guide to convert angles between degrees and radians",
+          "image": "https://degreesymbol.app/images/angle-conversion-steps.jpg",
+          "totalTime": "PT1M",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Enter Angle Value",
+              "text": "Input your angle value in either degrees or radians field",
+              "image": "https://degreesymbol.app/images/angle-input-step.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Choose Conversion Direction",
+              "text": "Click 'Degrees → Radians' or 'Radians → Degrees' button",
+              "image": "https://degreesymbol.app/images/conversion-button-step.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "View Results",
+              "text": "See instant conversion results with high precision",
+              "image": "https://degreesymbol.app/images/conversion-result-step.jpg"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the formula to convert degrees to radians?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The formula to convert degrees to radians is: radians = degrees × (π / 180). For example, 90° = 90 × (π / 180) = π/2 radians ≈ 1.571 radians."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I convert radians to degrees?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To convert radians to degrees, use the formula: degrees = radians × (180 / π). For example, π radians = π × (180 / π) = 180°."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why are radians used in mathematics and physics?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Radians are the natural unit for angular measurement in calculus and physics because they simplify many mathematical formulas. When angles are measured in radians, the derivative of sin(x) is cos(x) and the arc length formula becomes s = rθ without additional conversion factors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are common angle conversions I should know?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Common angle conversions include: 0° = 0 rad, 30° = π/6 rad ≈ 0.524 rad, 45° = π/4 rad ≈ 0.785 rad, 60° = π/3 rad ≈ 1.047 rad, 90° = π/2 rad ≈ 1.571 rad, 180° = π rad ≈ 3.142 rad, 270° = 3π/2 rad ≈ 4.712 rad, 360° = 2π rad ≈ 6.283 rad."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://degreesymbol.app"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tools",
+              "item": "https://degreesymbol.app/tools.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Angle Converter",
+              "item": "https://degreesymbol.app/degrees-to-radians.html"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://degreesymbol.app/degrees-to-radians.html#webpage",
+          "url": "https://degreesymbol.app/degrees-to-radians.html",
+          "name": "Angle Converter - Degrees to Radians & Radians to Degrees",
+          "description": "Free online angle converter tool for instant degrees to radians and radians to degrees conversion with precision accuracy for mathematics, physics, and engineering.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://degreesymbol.app/#website",
+            "name": "DegreeSymbol.app",
+            "url": "https://degreesymbol.app"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://degreesymbol.app/images/angle-converter.jpg"
+          },
+          "dateModified": "2024-01-01",
+          "breadcrumb": {
+            "@id": "https://degreesymbol.app/degrees-to-radians.html#breadcrumb"
+          }
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="canonical" href="https://degreesymbol.app/degrees-to-radians.html">
@@ -106,12 +291,41 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-gray-50 py-3">
+        <div class="max-w-6xl mx-auto px-4">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li><a href="tools.html" class="hover:text-blue-600 transition">Tools</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li class="text-blue-600 font-medium">Angle Converter</li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Header -->
     <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Angle Converter</h1>
-            <p class="text-xl text-gray-600 mb-8">Convert degrees to radians and radians to degrees instantly</p>
-            <div class="text-sm text-gray-500">Perfect for mathematics, physics, and engineering calculations</div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Angle Converter: Degrees ↔ Radians</h1>
+            <p class="text-xl text-gray-600 mb-8">Convert degrees to radians and radians to degrees instantly with high precision</p>
+            <div class="text-sm text-gray-500 mb-8">Perfect for mathematics, physics, engineering, trigonometry, and navigation calculations</div>
+
+            <!-- Quick Stats -->
+            <div class="flex justify-center space-x-8 text-sm">
+                <div class="flex items-center">
+                    <i class="fas fa-calculator text-blue-600 mr-2"></i>
+                    <span>Real-time Conversion</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-bullseye text-green-600 mr-2"></i>
+                    <span>High Precision</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-mobile-alt text-purple-600 mr-2"></i>
+                    <span>Mobile Friendly</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,26 +333,55 @@
     <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-12">
+                <!-- Quick Convert Buttons -->
+                <div class="mb-8 text-center">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Quick Convert Common Angles</h3>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <button onclick="quickConvert('degrees', 0)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">0°</button>
+                        <button onclick="quickConvert('degrees', 30)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">30°</button>
+                        <button onclick="quickConvert('degrees', 45)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">45°</button>
+                        <button onclick="quickConvert('degrees', 60)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">60°</button>
+                        <button onclick="quickConvert('degrees', 90)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">90°</button>
+                        <button onclick="quickConvert('degrees', 180)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">180°</button>
+                        <button onclick="quickConvert('degrees', 270)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">270°</button>
+                        <button onclick="quickConvert('degrees', 360)" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm transition">360°</button>
+                        <button onclick="quickConvert('radians', Math.PI/6)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">π/6</button>
+                        <button onclick="quickConvert('radians', Math.PI/4)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">π/4</button>
+                        <button onclick="quickConvert('radians', Math.PI/3)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">π/3</button>
+                        <button onclick="quickConvert('radians', Math.PI/2)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">π/2</button>
+                        <button onclick="quickConvert('radians', Math.PI)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">π</button>
+                        <button onclick="quickConvert('radians', 2*Math.PI)" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded text-sm transition">2π</button>
+                    </div>
+                </div>
+
                 <!-- Input Section -->
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
                     <div>
                         <label for="degrees-input" class="block text-sm font-medium text-gray-700 mb-2">Degrees (°)</label>
                         <input type="number" id="degrees-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg" placeholder="Enter degrees" step="0.01">
-                        <div class="mt-2 text-sm text-gray-500">Example: 90, 180, 360</div>
+                        <div class="mt-2 text-sm text-gray-500">Example: 90, 180, 360, 45.5</div>
+                        <div class="mt-2">
+                            <button onclick="clearDegrees()" class="text-xs text-gray-500 hover:text-gray-700">Clear</button>
+                        </div>
                     </div>
                     <div>
                         <label for="radians-input" class="block text-sm font-medium text-gray-700 mb-2">Radians (rad)</label>
                         <input type="number" id="radians-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg" placeholder="Enter radians" step="0.01">
-                        <div class="mt-2 text-sm text-gray-500">Example: 1.57, 3.14, 6.28</div>
+                        <div class="mt-2 text-sm text-gray-500">Example: 1.57, 3.14, 6.28, 0.785</div>
+                        <div class="mt-2">
+                            <button onclick="clearRadians()" class="text-xs text-gray-500 hover:text-gray-700">Clear</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Conversion Buttons -->
                 <div class="flex justify-center space-x-4 mb-8">
-                    <button id="convert-to-radians" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                    <button id="convert-to-radians" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200 flex items-center">
+                        <i class="fas fa-arrow-right mr-2"></i>
                         Degrees → Radians
                     </button>
-                    <button id="convert-to-degrees" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200">
+                    <button id="convert-to-degrees" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i>
                         Radians → Degrees
                     </button>
                 </div>
@@ -146,7 +389,15 @@
                 <!-- Result Display -->
                 <div id="result" class="bg-blue-50 rounded-xl p-6 hidden">
                     <h2 class="text-lg font-semibold text-gray-900 mb-2">Conversion Result</h2>
-                    <div id="result-text" class="text-2xl font-bold text-blue-600"></div>
+                    <div id="result-text" class="text-2xl font-bold text-blue-600 mb-3"></div>
+                    <div id="result-details" class="text-sm text-gray-600"></div>
+                </div>
+
+                <!-- Conversion History -->
+                <div id="conversion-history" class="mt-6 hidden">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">Recent Conversions</h3>
+                    <div id="history-list" class="space-y-2 max-h-40 overflow-y-auto"></div>
+                    <button onclick="clearHistory()" class="mt-3 text-sm text-gray-500 hover:text-gray-700">Clear History</button>
                 </div>
 
                 <!-- Common Angles Reference -->
@@ -212,10 +463,80 @@
         </div>
     </section>
 
-    <!-- Applications Section -->
+  <!-- Learning Resources Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Applications</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Understanding Degrees & Radians</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-circle-notch text-blue-600 mr-3"></i>
+                        What are Degrees?
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Degrees are a unit of angular measurement where a full circle is divided into 360 equal parts. Each degree represents 1/360 of a complete rotation.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Full circle = 360°</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Right angle = 90°</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Common in everyday use and navigation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-infinity text-purple-600 mr-3"></i>
+                        What are Radians?
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Radians are the natural unit of angular measurement in mathematics. One radian is the angle subtended at the center of a circle by an arc equal in length to the radius.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Full circle = 2π radians ≈ 6.283</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Right angle = π/2 radians ≈ 1.571</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Preferred in calculus and physics</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-12">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6 text-center">Why Use Radians?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">Simpler</div>
+                        <p class="text-sm text-gray-600">Many mathematical formulas become simpler when using radians</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">Natural</div>
+                        <p class="text-sm text-gray-600">Radians are the natural unit for angular measurement</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">Universal</div>
+                        <p class="text-sm text-gray-600">Standard in scientific and engineering applications</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Applications in Different Fields</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-md p-6">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -225,6 +546,11 @@
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Mathematics</h3>
                     <p class="text-gray-600 text-center">Trigonometry, calculus, and geometric calculations often require angle conversions between degrees and radians.</p>
+                    <div class="mt-3 text-xs text-center text-gray-500">
+                        • Trigonometric functions<br>
+                        • Calculus derivatives<br>
+                        • Complex numbers
+                    </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -234,6 +560,11 @@
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Physics</h3>
                     <p class="text-gray-600 text-center">Angular velocity, rotational motion, and wave mechanics calculations use both degree and radian measurements.</p>
+                    <div class="mt-3 text-xs text-center text-gray-500">
+                        • Rotational dynamics<br>
+                        • Wave mechanics<br>
+                        • Quantum physics
+                    </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -243,6 +574,131 @@
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Engineering</h3>
                     <p class="text-gray-600 text-center">Mechanical engineering, robotics, and CAD design applications frequently use angle conversions for precision.</p>
+                    <div class="mt-3 text-xs text-center text-gray-500">
+                        • Robotics control<br>
+                        • CAD design<br>
+                        • Signal processing
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold">What is the formula to convert degrees to radians?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">The formula to convert degrees to radians is: <strong>radians = degrees × (π / 180)</strong>. For example, 90° = 90 × (π / 180) = π/2 radians ≈ 1.571 radians.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold">How do I convert radians to degrees?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">To convert radians to degrees, use the formula: <strong>degrees = radians × (180 / π)</strong>. For example, π radians = π × (180 / π) = 180°.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold">Why are radians used in mathematics and physics?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Radians are the natural unit for angular measurement in calculus and physics because they simplify many mathematical formulas. When angles are measured in radians, the derivative of sin(x) is cos(x) and the arc length formula becomes s = rθ without additional conversion factors.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold">What are common angle conversions I should know?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-4"></i>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Common angle conversions include: 0° = 0 rad, 30° = π/6 rad ≈ 0.524 rad, 45° = π/4 rad ≈ 0.785 rad, 60° = π/3 rad ≈ 1.047 rad, 90° = π/2 rad ≈ 1.571 rad, 180° = π rad ≈ 3.142 rad, 270° = 3π/2 rad ≈ 4.712 rad, 360° = 2π rad ≈ 6.283 rad.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg">
+                    <button onclick="toggleFAQ(5)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold">How accurate is this angle converter?</span>
+                        <i class="fas fa-chevron-down transform transition-transform" id="faq-icon-5"></i>
+                    </button>
+                    <div id="faq-5" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">Our angle converter provides high-precision calculations using JavaScript's built-in Math.PI constant, which is accurate to 15-17 decimal places. Results are displayed with 6 decimal places for most applications, ensuring excellent accuracy for educational, engineering, and scientific purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Tricks Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Tips & Tricks</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Memory Aids</h3>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">π</span>
+                            <span>180° = π radians (memorize this key conversion)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">π/2</span>
+                            <span>90° = π/2 radians (right angle)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">π/3</span>
+                            <span>60° = π/3 radians (equilateral triangle angle)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">π/4</span>
+                            <span>45° = π/4 radians (isosceles right triangle)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">π/6</span>
+                            <span>30° = π/6 radians (30-60-90 triangle)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Estimations</h3>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span>1 radian ≈ 57.3° (approximately 60°)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span>1° ≈ 0.01745 radians (π/180)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span>For mental math: divide degrees by 57.3 to get radians</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span>For mental math: multiply radians by 57.3 to get degrees</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span>Use our quick convert buttons for common angles</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -299,9 +755,11 @@
         const convertToDegreesBtn = document.getElementById('convert-to-degrees');
         const resultDiv = document.getElementById('result');
         const resultText = document.getElementById('result-text');
+        const resultDetails = document.getElementById('result-details');
 
-        function showResult(text) {
+        function showResult(text, details = '') {
             resultText.textContent = text;
+            resultDetails.textContent = details;
             resultDiv.classList.remove('hidden');
         }
 
@@ -331,12 +789,17 @@
             }
         });
 
+        // Conversion history
+        let conversionHistory = [];
+
         // Real-time conversion on input
         degreesInput.addEventListener('input', function() {
             const degrees = parseFloat(this.value);
             if (!isNaN(degrees)) {
                 const radians = degreesToRadians(degrees);
                 radiansInput.value = radians.toFixed(6);
+                showResult(`${degrees}° = ${radians.toFixed(6)} rad`, `Formula: ${degrees} × (π / 180) = ${radians.toFixed(6)}`);
+                addToHistory('degrees', degrees, radians);
             }
         });
 
@@ -345,8 +808,97 @@
             if (!isNaN(radians)) {
                 const degrees = radiansToDegrees(radians);
                 degreesInput.value = degrees.toFixed(6);
+                showResult(`${radians} rad = ${degrees.toFixed(6)}°`, `Formula: ${radians} × (180 / π) = ${degrees.toFixed(6)}`);
+                addToHistory('radians', radians, degrees);
             }
         });
+
+        // Additional functions
+        function quickConvert(type, value) {
+            if (type === 'degrees') {
+                degreesInput.value = value;
+                const radians = degreesToRadians(value);
+                radiansInput.value = radians.toFixed(6);
+                showResult(`${value}° = ${radians.toFixed(6)} rad`, `Quick conversion: ${value}° = ${radians.toFixed(6)} rad`);
+                addToHistory('degrees', value, radians);
+            } else {
+                radiansInput.value = value;
+                const degrees = radiansToDegrees(value);
+                degreesInput.value = degrees.toFixed(6);
+                showResult(`${value.toFixed(6)} rad = ${degrees.toFixed(6)}°`, `Quick conversion: ${value.toFixed(6)} rad = ${degrees.toFixed(6)}°`);
+                addToHistory('radians', value, degrees);
+            }
+        }
+
+        function clearDegrees() {
+            degreesInput.value = '';
+            if (radiansInput.value === '') {
+                resultDiv.classList.add('hidden');
+            }
+        }
+
+        function clearRadians() {
+            radiansInput.value = '';
+            if (degreesInput.value === '') {
+                resultDiv.classList.add('hidden');
+            }
+        }
+
+        function addToHistory(type, value, result) {
+            const historyItem = {
+                type: type,
+                value: value,
+                result: result,
+                timestamp: new Date().toLocaleTimeString()
+            };
+
+            conversionHistory.unshift(historyItem);
+            if (conversionHistory.length > 5) {
+                conversionHistory = conversionHistory.slice(0, 5);
+            }
+
+            updateHistoryDisplay();
+        }
+
+        function updateHistoryDisplay() {
+            const historyDiv = document.getElementById('conversion-history');
+            const historyList = document.getElementById('history-list');
+
+            if (conversionHistory.length > 0) {
+                historyDiv.classList.remove('hidden');
+                historyList.innerHTML = conversionHistory.map(item => {
+                    if (item.type === 'degrees') {
+                        return `<div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                            <span class="text-sm">${item.value}°</span>
+                            <span class="text-sm font-medium">= ${item.result.toFixed(6)} rad</span>
+                            <span class="text-xs text-gray-500">${item.timestamp}</span>
+                        </div>`;
+                    } else {
+                        return `<div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                            <span class="text-sm">${item.value.toFixed(6)} rad</span>
+                            <span class="text-sm font-medium">= ${item.result.toFixed(6)}°</span>
+                            <span class="text-xs text-gray-500">${item.timestamp}</span>
+                        </div>`;
+                    }
+                }).join('');
+            } else {
+                historyDiv.classList.add('hidden');
+            }
+        }
+
+        function clearHistory() {
+            conversionHistory = [];
+            document.getElementById('conversion-history').classList.add('hidden');
+        }
+
+        // FAQ toggle function
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            faq.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
 
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
